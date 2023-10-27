@@ -1,7 +1,59 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rounded Squares Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+        }
+
+        .rounded-square {
+            width: 200px;
+            height: 200px;
+            background-color: #3498db;
+            border-radius: 50px;
+            margin: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            color: #fff;
+        }
+
+        .rounded-square:nth-child(even) {
+            background-color: #e74c3c;
+        }
+    </style>
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+    <header>
+        <h1>Rounded Squares Website</h1>
+    </header>
+    <div class="container">
+        <div class="rounded-square">1</div>
+        <div class="rounded-square">2</div>
+        <div class="rounded-square">3</div>
+        <div class="rounded-square">4</div>
+        <div class="rounded-square">5</div>
+    </div>
 </body>
 </html>
