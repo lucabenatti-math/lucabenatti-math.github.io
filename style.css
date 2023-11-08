@@ -348,7 +348,7 @@ section .container > *{
         grid-template-columns: 1fr;
     }
     header{
-        height: 150vh;
+        height: 150svh;
     }
     .header-boxes {
         flex-direction: column;
