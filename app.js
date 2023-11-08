@@ -16,30 +16,30 @@ let header_height = header.offsetHeight;
 let section_height = section.offsetHeight;
 
 window.addEventListener("scroll", () => {
-    let scroll = window.pageYOffset;
-    let sectionY = section.getBoundingClientRect();
+    //let scroll = window.pageYOffset;
+   // let sectionY = section.getBoundingClientRect();
     
-    translate.forEach(element => {
-        let speed = element.dataset.speed;
-        element.style.transform = `translateY(${scroll * speed}px)`;
-    });
+   // translate.forEach(element => {
+ //       let speed = element.dataset.speed;
+  //      element.style.transform = `translateY(${scroll * speed}px)`;
+ //   });
 
-    opacity.forEach(element => {
-        element.style.opacity = scroll / (sectionY.top + section_height);
-    })
-    if(window.innerWidth < 850){
-        hboxes.style.opacity = Math.max(Math.min(-4* scroll / header_height + 3,1),0);
-    } else {
-        hboxes.style.opacity = Math.max(Math.min(- scroll / header_height + 1,1),0);
-    }
-    shadow.style.height = `${scroll * 0.5 + 300}px`;
+  //  opacity.forEach(element => {
+  //      element.style.opacity = scroll / (sectionY.top + section_height);
+  //  })
+   // if(window.innerWidth < 850){
+  //      hboxes.style.opacity = Math.max(Math.min(-4* scroll / header_height + 3,1),0);
+   // } else {
+  //      hboxes.style.opacity = Math.max(Math.min(- scroll / header_height + 1,1),0);
+    //}
+    //shadow.style.height = `${scroll * 0.5 + 300}px`;
 
-    content.style.transform = `translateY(${scroll / (section_height + sectionY.top) * 50 - 50}px)`;
-    image_container.style.transform = `translateY(${scroll / (section_height + sectionY.top) * -50 + 50}px)`;
+//    content.style.transform = `translateY(${scroll / (section_height + sectionY.top) * 50 - 50}px)`;
+  //  image_container.style.transform = `translateY(${scroll / (section_height + sectionY.top) * -50 + 50}px)`;
 
-    border.style.width = `${scroll / (sectionY.top + section_height) * 30}%`;
+  //  border.style.width = `${scroll / (sectionY.top + section_height) * 30}%`;
     
-    nav.classList.toggle("scrolled", scrollY>0);
+ //   nav.classList.toggle("scrolled", scrollY>0);
     
 })
 window.addEventListener("resize", () => {
