@@ -266,7 +266,7 @@ h3:hover{
     align-items:flex-start;
     height: 100%;
     width:100%;
-    border-radius: .5vw;
+    border-radius: .5svw;
     background-color: rgba(0,0,0,0.9);
     color: white;
     padding: 2rem 2rem;
@@ -291,7 +291,7 @@ section .container{
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
+    min-height: 100svh;
 }
 
 section img{
@@ -446,8 +446,8 @@ section .container > *{
         opacity: 0;
         pointer-events: none; 
         display: flex;
-        width:100vw;    
-        height: 100vh;
+        width:100svw;    
+        height: 100svh;
         z-index: 150;
         cursor:pointer;
         background-color: rgba(0,0,0,0.6);
@@ -461,7 +461,7 @@ section .container > *{
         pointer-events: none;
         flex-direction: column;
         text-align: right;
-        height: 100vh;
+        height: 100svh;
         padding-top:3rem;
         padding-right: 1rem;
         z-index: 151;
