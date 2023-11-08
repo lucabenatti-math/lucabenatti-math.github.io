@@ -4,10 +4,12 @@
     padding: 0;
     margin: 0;
 }
+:root{
+    --background-color:#151515;
+}
 
 body{
     font-family: 'Poppins', sans-serif;
-    --background-color:#151515;
 }
 
 header{
@@ -20,21 +22,32 @@ header{
 
 .background{
     position: absolute;
-    top:0;
-    bottom:0;
-    right:0;
-    left:0;
+    top: -20px;
+    left:-20px;
+    right:-20px;
+    bottom: -20px;
     background: url('img/hexa_background.jpg');
+    height: 120svh;
+    background-size: cover;
+    background-repeat: no-repeat;
     filter: blur(10px) brightness(60%);
 }
 
 section{
     position: relative;
+
     
+}
+section:nth-child(odd){
+    background-color: #CE3003;
+     height: 100svh;
+    z-index: 5;
 }
 section:nth-child(even){
     background-color: var(--background-color);
     height: 100svh;
+    z-index: 5;
+
 }
 
 .container{
