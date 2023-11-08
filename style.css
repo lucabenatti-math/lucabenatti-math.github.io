@@ -3,6 +3,8 @@
 *{
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
+    
 }
 :root{
     --background-color:#151515;
@@ -13,8 +15,8 @@ body{
 }
 
 header{
-    width: 100svw;
-    height: 100svh;
+    width: 100%;
+    height: 100px;
     position: relative;
     overflow: hidden;
     display: flex;
@@ -27,7 +29,6 @@ header{
     right:-20px;
     bottom: -20px;
     background: url('img/hexa_background.jpg');
-    height: 120svh;
     background-size: cover;
     background-repeat: no-repeat;
     filter: blur(10px) brightness(60%);
