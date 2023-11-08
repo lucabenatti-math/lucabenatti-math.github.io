@@ -6,69 +6,38 @@
     box-sizing: border-box;
     
 }
-:root{
-    --background-color:#151515;
-}
 
 html{
-    background-color: var(--background-color);
-    height: 100%;
+    background-color: #151515;
 }
 
 body{
     font-family: 'Poppins', sans-serif;
-    height:100%;
+    height: 100svh;
 }
 
 header{
     width: 100%;
-    height: 100svh;
-    max-height:100svh;
+    height: 100%;
     position: relative;
     overflow: hidden;
     display: flex;
+    min-height: 0;
 }
 
-nav{
-    position: fixed;
-    background-color: #fff;
-    color: var(--background-color);
-    padding: 2rem;
-    width: 100%;
-    z-index:200;
-}
+
 
 .background{
     position: absolute;
-    top: -20px;
-    left:-20px;
-    right:-20px;
-    bottom: -20px;
-    background: url('img/hexa_background.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    filter: blur(10px) brightness(60%);
+    background-color: #151515;
 }
 
 section{
     position: relative;
-
-    
-}
-section:nth-child(odd){
-    background-color: #CE3003;
-     height: 100svh;
-    z-index: 5;
-}
-section:nth-child(even){
-    background-color: var(--background-color);
-    height: 100svh;
-    z-index: 5;
-
 }
 
 .container{
     width: 100%;
     height: 100%;
-    
+    background-color: #CE3003;
 }
