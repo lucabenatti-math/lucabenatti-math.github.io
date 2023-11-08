@@ -11,8 +11,8 @@ body{
 }
 
 header{
-    width: 100svw;
-    height: 100svh;
+    width: 100vw;
+    height: 100vh;
     position: relative;
     overflow: hidden;
     display: flex;
@@ -36,7 +36,7 @@ section{
 }
 section:nth-child(even){
     background-color: var(--background-color);
-    height: 100svh;
+    height: 100vh;
 }
 
 .container{
