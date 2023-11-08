@@ -20,10 +20,6 @@ header{
 
 .background{
     position: absolute;
-    top: -20svh;
-    left:-20svw;
-    right:-20svw;
-    bottom: -20svh;
     background: url('img/hexa_background.jpg');
     background-size: cover;
     background-repeat: no-repeat;
