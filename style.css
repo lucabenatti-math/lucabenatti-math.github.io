@@ -20,7 +20,7 @@ header{
 
 .background{
     position: absolute;
-    background-color: #CE3003;
+    background: url('img/hexa_background.jpg');
     filter: blur(10px) brightness(60%);
 }
 
