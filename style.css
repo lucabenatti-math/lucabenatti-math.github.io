@@ -21,8 +21,6 @@ header{
 .background{
     position: absolute;
     background-color: acqua;
-    background-size: cover;
-    background-repeat: no-repeat;
     filter: blur(10px) brightness(60%);
 }
 
