@@ -33,6 +33,7 @@ nav{
     color: var(--background-color);
     padding: 2rem;
     width: 100%;
+    z-index:200;
 }
 
 .background{
