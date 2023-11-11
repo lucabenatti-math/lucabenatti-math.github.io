@@ -9,12 +9,21 @@
     </head>
     <body>
         <header>
-            <div class="background"></div>
-            <div style="color: aqua; font-size:10vh;"> Example </div>
+            <div class="background" style="color: aqua; font-size:10vh;" id="myDiv"></div>
         </header>
         <section>
             <div class="container">
             </div>
         </section>
     </body>
+    <script>
+    // Get the div element
+    var myDiv = document.getElementById("myDiv");
+
+    // Get the width of the div
+    var divWidth = myDiv.offsetWidth;
+
+    // Update the content of the div with its width
+    myDiv.innerHTML = "This is a div. Width: " + divWidth + "px";
+    </script>
 </html>
