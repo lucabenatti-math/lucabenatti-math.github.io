@@ -1,29 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="height=device-height, initial-scale=1.0, viewport-fit=cover, user-scalabe=no">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Luca Benatti</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <header>
-            <div class="background" style="color: aqua; font-size:10vh;" id="myDiv"></div>
-        </header>
-        <section>
-            <div class="container">
-            </div>
-        </section>
-    </body>
-    <script>
-    // Get the div element
-    var myDiv = document.getElementById("myDiv");
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Div Width</title>
+    <style>
+        html,body{
+            margin: 0;
+            padding: 0;
+        }
+        #myDiv {
+            width: 100%; /* Set an initial width for the div */
+            height: 110vh;
+        }
+    </style>
+</head>
+<body>
 
-    // Get the width of the div
-    var divWidth = myDiv.offsetWidth;
+<div id="myDiv">
+</div>
 
-    // Update the content of the div with its width
-    myDiv.innerHTML = "This is a div. Width: " + divWidth + "px";
-    </script>
+<script>
+    // Function to update the div content with its width
+    function updateWidth() {
+        // Get the div element
+        var myDiv = document.getElementById("myDiv");
+
+        // Get the width of the div
+        var divWidth = myDiv.offsetHeight;
+
+        // Update the content of the div with its width
+        myDiv.innerHTML = "This is a div. Width: " + divWidth + "px";
+    }
+
+    // Initial update
+    updateWidth();
+
+    // Add an event listener for the resize event
+    window.addEventListener("resize", updateWidth);
+</script>
+
+</body>
 </html>
