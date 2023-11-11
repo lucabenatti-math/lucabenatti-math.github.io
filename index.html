@@ -16,20 +16,14 @@
         </section>
         <script>
     // Function to update the div content with its width
-    const myDiv = document.getElementById("myDiv");
-    const divHeight = myDiv.offsetHeight;
-    function updateWidth() {
-        // Update the content of the div with its width
-        //myDiv.style.height = divHeight+"px";
-        myDiv.innerHTML = "This is a div. Height: " + divHeight + "px";
+    const startingHeight = document.body.offsetHeight;
+    function fixHeight() {
+        document.body.style.height=startingHeight + "px";
     }
             
             
     // Initial update
-    updateWidth();
-
-    // Add an event listener for the resize event
-    window.addEventListener("resize", updateWidth);
+    fixHeight();
 </script>
     </body>
 </html>
