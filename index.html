@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!--        <meta http-equiv="X-UA-Compatible" content="ie=edge">-->
+    
         <title>Luca Benatti</title>
         <link rel="stylesheet" href="style.css">
     </head>
@@ -16,17 +16,15 @@
         </section>
         <script>
     // Function to update the div content with its width
+    const myDiv = document.getElementById("myDiv");
+    const divHeight = myDiv.offsetHeight;
     function updateWidth() {
-        // Get the div element
-        var myDiv = document.getElementById("myDiv");
-
-        // Get the width of the div
-        var divWidth = myDiv.offsetHeight;
-
         // Update the content of the div with its width
-        myDiv.innerHTML = "Height: " + divWidth + "px";
+        myDiv.style.height = divHeight+"px";
+        myDiv.innerHTML = "This is a div. Height: " + divHeight + "px";
     }
-
+            
+            
     // Initial update
     updateWidth();
 
