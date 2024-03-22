@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SQLite Database Table</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.7.3/sql-wasm.js"></script>
+    <script>
+        window.onload = function() {
+            // Load SQLite database file
+            fetch('database.sqlite')
+                .then(response => response.arrayBuffer())
+                .then(buffer => {
+                    // Initialize SQL.js with the database buffer
+                    const db = new SQL.Database(new Uint8Array(buffer));
+
+                    // Execute a query to fetch data from the database
+                    const query = "SELECT * FROM your_table;";
+                    const result = db.exec(query);
+
+                    // Generate HTML table to display the data
+                    const table = document.createElement('table');
+                    const headerRow = table.insertRow();
+                    Object.keys(result[0].columns).forEach(function(column) {
+                        const cell = headerRow.insertCell();
+                        cell.textContent = result[0].columns[column];
+                    });
+                    result[0].values.forEach(function(rowData) {
+                        const row = table.insertRow();
+                        rowData.forEach(function(cellData) {
+                            const cell = row.insertCell();
+                            cell.textContent = cellData;
+                        });
+                    });
+
+                    // Append the table to the document body
+                    document.body.appendChild(table);
+                })
+                .catch(error => console.error('Error loading database file:', error));
+        };
+    </script>
+</head>
+<body>
+    <h1>SQLite Database Table</h1>
+</body>
+</html>
