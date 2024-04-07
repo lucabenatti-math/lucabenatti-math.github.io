@@ -11,13 +11,16 @@ document.addEventListener("touchstart", ()=>{
     navLinks.forEach(link =>{
         link.classList.remove("non-touch");
     });
+    document.querySelector(".name").classList.remove("non-touch");
 }, false);
 
 document.addEventListener("mouseover", ()=>{
     navLinks.forEach(link =>{
         link.classList.add("non-touch");
     });
+    document.querySelector(".name").classList.add("non-touch");
 }, false);
+
 window.addEventListener("scroll", function() {
     const parallaxBg = document.querySelector(".parallax-bg");
     let scrollPosition = window.pageYOffset;
@@ -116,6 +119,8 @@ theNews.forEach((myNews,index) => {
     var delay = index * .5;
     myNews.style.setProperty("--after-animation-delay", delay+"s");
 });
+
+
 
 // DISABLE MOUSEWHEEL MOVEMENT WHEN ON SCROLLED ON NEWS
 //var news = document.querySelector(".news");

@@ -59,12 +59,16 @@ nav .name{
     text-transform: uppercase;
     font-weight: 600;
     letter-spacing: 2px;
+    transition: .4s;
 }
 
 nav .name light{
     font-weight: 300;
 }
-
+nav .non-touch:hover{
+    color: var(--main-color);
+    transition: .4s;
+}
 nav a{
     color: var(--text-color);
     cursor: pointer;
