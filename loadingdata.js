@@ -21,7 +21,7 @@ async function loadData() {
         const buffer = await response.arrayBuffer();
 
         // Initialize SQL.js with the database buffer
-        const SQL = await initSqlJs({ locateFile: () => 'https://cdn.jsdelivr.net/npm/sql.js/dist/sql-wasm.wasm' });
+        const SQL = await initSqlJs({ locateFile: () => 'sql-wasm.wasm'}); //https://cdn.jsdelivr.net/npm/sql.js/dist/sql-wasm.wasm' });
         const db = new SQL.Database(new Uint8Array(buffer));
 
         // Execute a query to retrieve data
