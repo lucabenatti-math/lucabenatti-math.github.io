@@ -1,0 +1,393 @@
+:root{
+    --main-color: rgba(0,238,255,1);
+    --palette-first: #081C29;
+    --palette-second: #0F2C44;
+    --text-color:#FEFEFE;
+    --news-box: 30rem;
+    --text-light:#6F8A91;
+    --text-light-second:#BDCACD;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+html{
+    overflow-x: hidden;
+    background-color: var(--palette-first);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing:border-box;
+    text-decoration: none;
+    scroll-behavior: smooth; 
+}
+
+header{
+    background-color: transparent;
+    top: 0;
+    left: 0;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    z-index: 1000;
+    width: 100%;
+    padding: 1.7rem 7rem;
+    color: var(--text-color);
+    transition: .4s ease-in-out;
+}
+
+.scrolled{
+    background-color: var(--text-color);
+    padding: .5rem 7rem;
+    transition: .4s ease-in-out;
+    color: var(--palette-first);
+    box-shadow:  0px 0px 10px 5px rgba(0, 0, 0, .8);
+}
+
+.ham-menu{
+    width: 35px;
+    height: 30px;
+    right: 0%;
+    top:50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    visibility: visible;
+    padding: 2.5px;
+}
+
+.ham-menu span{
+    height: 5px;
+    width: 100%;
+    background-color: var(--text-color);
+    border-radius: 2.5px;
+}
+nav{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+    user-select: none;
+    width: 100%;
+}
+
+nav .name{
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 2px;
+    transition: .4s;
+}
+
+nav .name light{
+    font-weight: 300;
+}
+nav .non-touch:hover{
+    color: var(--main-color);
+    transition: .4s;
+}
+nav a{
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+.scrolled a{
+    color: var(--palette-first);
+}
+
+
+.menu .non-touch:hover{
+    color: var(--main-color);
+    transition: .4s;
+}
+
+
+.menu .active{
+    color:var(--main-color);
+}
+
+
+
+.menu{
+    gap:1.5rem;
+    display: flex;
+    flex-direction: row;
+}
+
+
+section{
+    width: 100%;
+    height: auto; 
+    background: var(--palette-first);
+    color: var(--text-color);
+    padding: 3rem 7rem;
+    position: relative;
+}
+
+.container{
+    position: relative;
+    width: 100%;
+    height:100%;
+    overflow: visible;
+}
+
+.layout-centred{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+bar{
+    max-width: 50%;
+    min-height: .2rem;
+    width:50%;
+    height: .2rem;
+    background-color: white;
+    margin:1rem 0rem;
+}
+
+h1{
+    font-size: 2rem;
+}
+
+
+
+h2{
+    font-size: 1.5em;
+}
+
+h3{
+    font-size: 1.3rem;
+}
+
+h4{
+    font-size: 1.1rem;
+}
+
+p{
+    font-size: 1rem;
+}
+span{
+    color: var(--main-color);
+}
+
+ul{
+    list-style-type: circle;
+}
+
+li{
+    font-size: .9rem;
+    margin-bottom: .5rem;
+    margin-left: 1.5rem;
+}
+li::marker{
+    color: var(--text-color);
+    font-size: 1.2rem;
+}
+bf{
+    font-weight: 600;
+}
+up{
+    text-transform: uppercase;
+}
+
+
+/*HOME BIO AND NEWS SECTION*/
+
+#Home{
+    padding: 5rem 7rem;
+    background: transparent;
+    height: 100vh
+}
+
+.glass-box{
+    width: 100%;
+    height: 100%;
+    background-color: var(--palette-first);
+    opacity: 0.85;
+    padding: 2rem 2rem;
+    box-shadow:  0px 0px 16px 0 rgba(0, 0, 0, .4), 0 12px 40px 0 rgba(0, 0, 0, .4);
+    transition: 0.6s;
+    border-radius: 1rem; 
+}
+
+.shadow{
+    position: absolute;
+    bottom: 0;
+    height: 150px;
+    width: 100%;
+    left: 0;
+    z-index: 50;
+    background: linear-gradient(to top, var(--palette-first), transparent);
+}
+
+.parallax-bg{
+    position: fixed;
+    left: -20px;
+    top: -20px;
+    width: 130%;
+    height: 130%;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center;
+    background-image: url('img/hexa_background.jpg');
+    filter: blur(10px) brightness(70%);
+    z-index: -2;
+} 
+
+#biopic{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+
+#biography{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 60%;
+    height: 100%;
+    padding: 2rem 1rem;
+    gap:.5rem;
+}
+
+#profilepicture{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+}
+
+#profilepicture img{
+    object-fit:contain; 
+    position: relative; 
+    width: 100%; 
+    height: 100%;
+}
+
+.social-buttons{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    margin-top:2rem!important; 
+}
+
+.text-buttons{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    margin-top: 2rem!important;
+}
+
+
+
+.title{
+    width: 100%;
+    padding: 2rem;
+    opacity: 0;
+}
+
+
+@media screen and (max-width:1200px){
+    
+    h1{
+        font-size: 1.5rem;
+    }
+
+    h2{
+        font-size: 1em;
+    }
+
+    h3{
+        font-size: .8rem;
+    }
+
+    h4{
+        font-size: .6rem;
+    }
+
+    section{
+        padding:3rem 3rem;
+    }
+    
+    #Home{
+        padding: 5rem 3rem;
+    }
+    
+    header{
+        padding: 1.9rem 3rem; 
+    }
+    .scrolled{
+        padding: .5rem 3rem;
+    }
+    .research-grid{
+        grid-template-columns: 1fr 1fr;
+        transition: 2s;
+    }
+    .research-line:last-child{
+        justify-self: center;
+        grid-column-start: span 2;
+        width: calc(50% - .5rem);
+    }
+}
+
+@media screen and (max-width:800px){
+    .research-grid{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .research-line:last-child{
+        justify-self: center;
+        grid-column-start: span 1;
+        width: 100%;
+    }
+    header{
+        padding: 1.9rem 1.5rem; 
+    }
+    section{
+        padding: 1rem 1.5rem;
+    }
+    #Home{
+        height: auto;
+        padding: 6rem 1.5rem;
+    }
+    #biopic{
+        flex-direction: column-reverse;
+        height: 50rem;
+    }
+    #biography{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        padding: 2rem 1rem;
+    }
+
+    #profilepicture{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 40%;
+        align-content: center;
+        align-items: center;
+        padding: 0rem;
+    }
+    #profilepicture img{
+        object-fit:contain; 
+        position: relative; 
+    }
+    tspan{
+        font-size: .6rem;
+    }
+}

@@ -1,0 +1,38 @@
+{
+    "eslintConfig": {
+        "globals": {
+            "Vue": true,
+            "Swiper": true
+        },
+        "env": {
+            "browser": true,
+            "es6": true,
+            "jquery": true
+        },
+        "extends": [
+            "eslint:recommended"
+        ],
+        "parserOptions": {
+            "sourceType": "module"
+        },
+        "scripts": {
+            "build": "echo This is a static template, there is no bundler or bundling involved!",
+            "start": "serve"
+        },
+        "rules": {
+            "no-console": 0,
+            "indent": [
+                "error",
+                4
+            ],
+            "linebreak-style": [
+                "error",
+                "unix"
+            ],
+            "quotes": [
+                "error",
+                "double"
+            ]
+        }
+    }
+}

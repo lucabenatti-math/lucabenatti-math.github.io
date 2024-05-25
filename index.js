@@ -1,5 +1,3 @@
-const menuButton = document.querySelector(".news-button");
-/*==== BioNews swiper parallax ====*/
 
 let sections = document.querySelectorAll("section");
 let navLinks = document.querySelectorAll(".menu a");
@@ -20,6 +18,38 @@ document.addEventListener("mouseover", ()=>{
     });
     document.querySelector(".name").classList.add("non-touch");
 }, false);
+
+const targetPoints =  [".5,.5", "3,3.5", "5.5,.5"].map(point => point.split(",").map(parseFloat));
+const originalPoints = [".5,3.5", "3,.5", "5.5,3.5"].map(point => point.split(",").map(parseFloat));
+const arrowPapers = papersButton.querySelector("polyline");
+
+const animationDuration = 1000; // milliseconds
+let animationStartTime = null;
+let isTransformed = false;
+
+function transformPolyline(timestamp) {
+    if (!animationStartTime) {
+        animationStartTime = timestamp;
+    }
+
+    const progress = Math.min(1, (timestamp - animationStartTime) / animationDuration);
+    const newPoints = [];
+    console.log(progress);
+    for (let i = 0; i < originalPoints.length; i++) {
+        const x = isTransformed ? originalPoints[i][0] + (targetPoints[i][0] - originalPoints[i][0]) * progress : targetPoints[i][0] + (originalPoints[i][0] - targetPoints[i][0]) * progress;
+        const y = isTransformed ? originalPoints[i][1] + (targetPoints[i][1] - originalPoints[i][1]) * progress : targetPoints[i][1] + (originalPoints[i][1] - targetPoints[i][1]) * progress;
+        newPoints.push(`${x},${y}`);
+    }
+    arrowPapers.setAttribute("points", newPoints);
+
+    if (progress < 1) {
+        requestAnimationFrame((timestamp) => transformPolyline(timestamp));
+    } else {
+        animationStartTime = null;
+        isTransformed = !isTransformed;
+    }
+}
+
 
 window.addEventListener("scroll", function() {
     const parallaxBg = document.querySelector(".parallax-bg");
@@ -44,9 +74,8 @@ window.addEventListener("scroll", function() {
                 if(id !== "Papers" && id !== "Research"){
                     papersButton.style.transform = "scale(1)";
                     document.querySelector(".papers-list").style.height=0;
-                }
-                if(id!=="Home"){
-                    backToBio();
+                    arrowPapers.setAttribute("points", ".5,.5 3,3.5 5.5,.5");
+                    isTransformed=false;
                 }
             });
         }
@@ -59,11 +88,11 @@ papersButton.addEventListener("click", function () {
     const papersList = document.querySelector(".papers-list");
     if(papersList.clientHeight){
         papersList.style.height=0;
-        this.style.transform ="scale(1)";
+        requestAnimationFrame((timestamp) => transformPolyline(timestamp));
     } else {
         const papersWrapper = document.getElementById("wrapperPapers");
-        this.style.transform ="scale(-1)";
         papersList.style.height = "calc("+papersWrapper.clientHeight+"px + 1rem)";
+        requestAnimationFrame((timestamp) => transformPolyline(timestamp));
     }
 });
 
@@ -89,83 +118,3 @@ function formatDate(inputDate) {
     // Return the formatted date string
     return formattedDate;
 }
-
-const bioSwiper = new Swiper(".bio-news", {
-    speed: 600,
-    mousewheel: false,
-    initialSlide:0,
-    direction:"horizontal",
-    effect: "creative",
-    allowTouchMove:false,
-    grab:false,
-    resistance:true,
-    nested: true,
-    resistanceRatio:0,
-    ///slideToClickedSlide:true,
-    creativeEffect: {
-        next: {
-            translate: ["-4rem",0,1],
-        },
-        prev: {
-            translate: [0, 0, -50],
-        },
-    },
-
-});
-
-var theNews = document.querySelectorAll(".news-animation")
-
-theNews.forEach((myNews,index) => {
-    var delay = index * .5;
-    myNews.style.setProperty("--after-animation-delay", delay+"s");
-});
-
-
-
-// DISABLE MOUSEWHEEL MOVEMENT WHEN ON SCROLLED ON NEWS
-//var news = document.querySelector(".news");
-//news.addEventListener("mouseenter", () => {
-//    homeSwiper.mousewheel.disable();
-//});
-//
-//news.addEventListener("mouseleave", () => {
-//    homeSwiper.mousewheel.enable();
-//});
-var newsSwiper = new Swiper(".newslist", {
-    speed: 600,
-    initialSlide:0,
-    direction:"vertical",
-    freeMode:true,
-    spaceBetween: "-1px",
-    slidesPerView: "auto",
-    allowTouchMove:true,
-    grab:false,
-    mousewheel: {
-        invert: false,
-        forceToAxis: true,      // Enable forceToAxis for smoother scrolling
-        releaseOnEdges: true,   // Allow releasing on edges for smoother bounce effect
-        sensitivity:.1,
-    },
-    resistance:true,
-    resistanceRatio:0,
-    scrollbar: {
-        el: ".news-scrollbar",
-        hide:true,
-        draggable:true,
-    },
-});
-
-
-function openMenu() {
-    menuButton.classList.toggle("cross");
-    bioSwiper.slideTo(!bioSwiper.realIndex);
-};
-
-
-function backToBio(){
-    bioSwiper.slideTo(0);
-    menuButton.classList.remove("cross");
-}
-
-
-

@@ -5,237 +5,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Luca Benatti</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto:400,700&display=swap"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Roboto:400,700&display=swap"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="buttons.css">
+    <link rel="stylesheet" href="menu.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <!-- Include the sql-wasm.js library -->
     <script src="sql-wasm.js"></script>
 </head>
 <body>
     <header>
+
         <nav>
-            <a class="name" tabindex="1" href="#Home" class=""><light>Luca</light> Benatti</a>
+            <div class="nav_menu">
+                <a class="name" tabindex="1" href="#Home" class="">
+                    <light>Luca</light> Benatti
+                </a>
+                <div class="nav_list">
+                    <div class="nav_item">
+                        <a href="#Research">Research</a>
+                    </div>
+                    <div class="nav_item">
+                        <a href="#Talks">Talks</a>
+                    </div>
+                    <div class="nav_item">
+                        <a href="#Organization">Organization</a>
+                    </div>
+                    <div class="nav_item">
+                        <a href="#Teaching">Teaching</a>
+                    </div>
+                </div>
+
+                <div class="ham-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+<!--
             <div class="menu">
-                <a tabindex="2" href="#Research" class="non-touch" onclick="backToBio()"><p>Research</p></a>
+                <a tabindex="2" href="#Research" class="non-touch" onclick="backToBio()">Research</a>
                 <a tabindex="3" href="#Talks" class="non-touch" onclick="backToBio()">Talks</a>
                 <a tabindex="4" href="#Organization" class="non-touch" onclick="backToBio()">Organization</a>
                 <a tabindex="5" href="#Teaching" class="non-touch" onclick="backToBio()">Teaching</a>
             </div>
-        </nav>
-    </header>
-    <div class="parallax-bg"></div>
-    <section id="Home" style="height: 100vh;">
-        <div class="container layout-centred">
-            <div class="swiper bio-news">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="glass-box">
-                            <div id="biography">
-                                <h1>Hi, I'm <span>Luca Benatti</span></h1>
-                                <h2>Post-doc in mathematics at University of Pisa.</h2>
-                                <p>
-                                    My research is in <em>Geometric Analysis</em> and <em>Mathematical General Relativity</em>. I am interested in analytic and geometric problems that arise from the study of partial differential equations.
-                                </p>
-                                <div id="socialButtons" class="social-buttons"></div>
-                                <div class="text-buttons">                                                         
-                                   <svg width="11rem" height="2.5rem">
-                                        <a id="afterNB" href="https://drive.google.com/file/d/1DynzRB6gRd3zeeAB1ZkkZq8h5Ej5vSVd/view?usp=sharing">
-                                            <rect class="rounded-button color" mask="url(#CV-mask)"  vector-effect="non-scaling-stroke"></rect>
-                                            <mask id="CV-mask">
-                                                <rect class="rounded-button"  vector-effect="non-scaling-stroke"></rect>
-                                                <text class="button-text" dx="50%" dy="50%">
-                                                    <tspan>Download CV</tspan>
-                                                </text>
 
-                                            </mask>
-                                        </a>
-                                    </svg>
-                                    <svg width="11rem" height="2.5rem" >
-                                        <a href="mailto:luca.benatti@dm.unipi.it">
-                                            <rect class="rounded-button color" mask="url(#mailto-mask)"  vector-effect="non-scaling-stroke"></rect>
-                                            <mask id="mailto-mask">
-                                                <rect class="rounded-button"  vector-effect="non-scaling-stroke"></rect>
-                                                <text class="button-text" dx="50%" dy="50%">
-                                                    <tspan>Contact me</tspan>
-                                                </text>
-
-                                            </mask>
-                                        </a>
-                                    </svg>
-                                </div> 
-                            </div>
-
-                            <div id="profilepicture">
-                                <img src="img/profilepicture.png" style="object-fit:contain; position: relative; width: 100%; height: 100%;"/><!---filter: brightness(85%)--->
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="news-button" onclick="openMenu()">
-                            <div class="bar"></div>
-                        </div>
-
-                        <div class="glass-box news">
-                            <div class="title">
-                                <h1 offset=".1">NEWS</h1>
-                            </div>
-                            <div class="swiper newslist">
-                                <div class="swiper-wrapper">
-                                </div>
-                            </div>
-                            <div class="news-scrollbar swiper-scrollbar"></div>
-                        </div>
-                        <div class="closenews" onclick="openMenu()"></div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-        <div class="shadow"></div>
-    </section> 
-    
-    <section id="About" >
-         <div class="container layout-centred" style="padding-top: 10rem; padding-bottom: 2rem; flex-direction: row; align-items: flex-start;justify-content: center; gap:2rem;font-family: 'Indie Flower', cursive; font-size: 1.05rem;">    
-            <div class="starting-quote">
-                There was no up, there was no down, there was no side to side.<br/>
-                There was no light, there was no dark, nor shape of any kind.<br/>
-                There were no stars or planet Mars, or protons to collide.<br/>
-                There was no up, there was no down, there was no side to side.<br/><br/>
-                
-                And furthermore to underscore this total lacking state,<br/>
-                there was no here, there was no there, because there was no space.<br>
-                And in this endless void which can't be thought of as a place, <br/>
-                there was no time, and so no passing minutes, hours, days.
-            </div>
-            <div class="ending-quote">
-                Of all the paradoxes that belabour common sense, <br/>
-                I think this one's the greatest this time before events. <br/>
-                Because how did we go from nothing to infinitely dense? <br/>
-                From immeasurably small to inconceivably immense?<br/><br/>
-
-                But before we get unmoored from the question at the start, <br/>
-                let's take a breath and marvel at <b>when math becomes an art</b>.<br/>
-                Because we don't have to understand it to know there was a time, <br/>
-                when there was no up, there was no down, there was no side to side.<br/>
-                <div style="text-align: right; padding:1rem; padding-right: 8rem; font-size: 2rem;">— Ella Cordova     </div>
-            </div>
-        </div>
-    </section>
-                
-    <section id="Research" style="background-color: var(--palette-second);">
-        <div class="container layout-centred">
-            <h2><up>Research</up></h2>
-            <bar></bar>
-            <div id="wrapperResearch" class="research-grid">
-                <!--ADD LINES-->
-            </div>
-        </div>
-    </section>
-    <section id="Papers" style="background-color: var(--palette-second);"> <!--- style="background-color: var(--palette-second);">--->
-        <div class="container layout-centred">
-            <h3 style="text-align: center;">List of papers</h3>
-            <div class="papers-list">
-                <ul id="wrapperPapers">
-                </ul>
-            </div>
-            <div class="papers-button">
-                <svg viewBox="0 0 6 4"  style="overflow: visible;">
-                    <polyline points=".5,.5 3,3.5 5.5,.5" fill="none" stroke-linejoin="miter" stroke="var(--text-light-second)" stroke-width="1" stroke-linecap="round"></polyline>
-                </svg>
-            </div> 
-        </div>
-    </section>
-    <section id="Talks" >
-        <div class="container layout-centred">
-            <h2><up>Selected talks</up></h2>
-            <bar></bar>
-            <div class="swiper talks">
-                <div id="wrapperTalks" class="swiper-wrapper">
-                </div> 
-                <div class="talks-button-next">
-                    <svg viewBox="0 0 4 6" style="overflow: visible;">
-                        <polyline points="0.5,0.5 3,3 0.5,5.5" fill="none" stroke-linejoin="miter" stroke="var(--main-color)" stroke-width="1" stroke-linecap="round"></polyline>
-                    </svg>
-                </div>
-                <div class="talks-button-prev">
-                    <svg viewBox="0 0 4 6"  style="overflow: visible;">
-                        <polyline points="3,0.5 .5,3 3,5.5" fill="none" stroke-linejoin="miter" stroke="var(--main-color)" stroke-width="1" stroke-linecap="round"></polyline>
-                    </svg>
-                </div>  
-            </div>           
-
-            <div class="autoplay-progress">
-              <svg viewBox="0 0 86 5">
-                <line y1="2.5" y2="2.5" stroke="var(--main-color)" stroke-width="4" stroke-linecap="round"></line>
-              </svg>
-            </div>
-        </div>
-    </section>
-    <section id="Organization" style="background-color: var(--palette-second);">
-        <div class="container layout-centred">
-            <h2><up>Organization</up></h2>
-            <bar></bar>
-            <div class="swiper organization">        
-                <div class="background"></div>              
-                <div id="wrapperOrganization" class="swiper-wrapper"></div>   
-                <div class="organization-pagination"></div>
-            </div>
-        </div>
-    </section>
-    <section id="Teaching">
-        <div class="container layout-centred">
-            <h2><up>Teaching</up></h2>
-            <bar></bar>
-            <div class="teaching-container">
-                <div class="swiper teaching">
-                    <div id="wrapperTeaching" class="swiper-wrapper">
-
-                    </div> 
-                </div>
-                <div class="swiper years wheel-closed">
-                    <div class="wheel-picker">
-                        <div class="triangle"></div>
-                    </div>
-                    <div id="wrapperYears" class="swiper-wrapper">
-                        
-                    </div> 
-                </div>
-            </div>
-        </div>
-    </section>
-        
-        <script>
-            var socialsData =[
-                { id: 1, link: "https://arxiv.org/search/math?searchtype=author&query=Benatti,+L", icon: "arxiv" },
-                { id: 2, link: "https://scholar.google.com/citations?view_op=list_works&hl=it&user=v9uPo6IAAAAJ&gmla=AJsN-F5ZHMc5Eww_QoxsmD7pzyV3_g99e3iIqCUhCY_8_EuMC3AAsJfswOj-CbSQMDhbPEOAsJeTdX6aqMAJHkhr49GfC7_5kAS6AHdeuacwfA9vo2hll4RUxJRln31FVVomVbGQRAop", icon: "google" },
-                { id: 3, link: "https://orcid.org/0000-0002-4685-7443", icon: "orcid" },
-                { id: 4, link: "https://cvgmt.sns.it/person/3317/", icon: "cvgmt" },
-                { id: 5, link: "https://www.researchgate.net/profile/Luca-Benatti", icon: "rgate" }
-            ];
+            <div>
             
-            const svgTemplate = (id,link,icon) => `
-                <svg width="50px" height="50px" viewBox="0 0 60 60">
-                    <a href="${link}">
-                        <rect class="rounded-button color" mask="url(#${id}-mask)" vector-effect="non-scaling-stroke"></rect>
-                        <mask id="${id}-mask">
-                            <rect class="rounded-button inverted" vector-effect="non-scaling-stroke"></rect>
-                            <path class="icon-${icon}" width="20%"></path>
-                        </mask>
-                    </a>
-                </svg>
-            `;
-            socialsData.forEach(social => {
-                const istance = svgTemplate(social.id,social.link,social.icon);
-                document.getElementById("socialButtons").innerHTML +=istance;
-            });
-        </script>
-           
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-        <script type="text/javascript" src="index.js"></script>
-        <script type="text/javascript" src="templates.js"></script>
-        <script type="text/javascript" src="loadingdata.js" async></script>
-    </body>
-</html>
+            </div>
+-->
+        </nav>
+
+    </header>
+    
+    <section style="height: 50rem;">
+        
+    
+    </section>
+    <section>
+    </section>
+    
+    <script type="text/javascript" src="menu.js"></script>
+</body>
