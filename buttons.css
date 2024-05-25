@@ -7,7 +7,7 @@
     opacity: 1;
     transform: translate(50%,50%);
     fill:white;
-    transition:.3s;
+    transition:.4s ease-in-out;;
 }
 
 .icon-google{
@@ -15,7 +15,7 @@
     opacity: 1;
     transform: translate(50%,50%);
     fill:white;
-    transition:.3s;
+    transition:.4s ease-in-out;;
 }
 
 
@@ -24,7 +24,7 @@
     opacity: 1;
     transform: translate(50%,50%);
     fill:white;
-    transition:.3s;
+    transition:.4s ease-in-out;;
 }
 
 
@@ -33,7 +33,7 @@
     opacity: 1;
     transform: translate(50%,50%);
     fill:white;
-    transition:.3s;
+    transition:.4s ease-in-out;;
 }
 
 .icon-rgate{
@@ -41,137 +41,85 @@
     opacity: 1;
     transform: translate(50%,50%);
     fill:white;
-    transition:.3s;
+    transition:.4s ease-in-out;;
 }
 
+
+.svg_button{
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    display: flex;
+    flex-direction: row;
+    background: none;
+    border-radius: 4rem;
+    max-height: 60px;
+    box-shadow: 0px 0px .3rem .2rem rgba(0, 238, 256, .2),inset 0px 0px 0rem 2px rgba(0, 238, 256, 1);
+    transition: .4s;
+}
+
+.svg-button::before{
+    content: '';
+    border-radius: none;
+}
 
 
 /* Text button*/
 .rounded-button{
-    x:calc(var(--border-width)/2);
-    y:calc(var(--border-width)/2);
-    height: calc(100% - var(--border-width));
-    width: calc(100% - var(--border-width));
-    ry:50%;
-    stroke-width:var(--border-width);
+    x:0px;
+    y:-4px;
+    width: 100%;
+    height: calc(100% + 40px);
     fill:white;
-    stroke:white;
-    transition: fill ease-in-out .5s, stroke ease-in-out .5s;
-    z-index: 2
+    transition: fill .4s ease-in-out, stroke .4s ease-in-out;
+    z-index: 2;
 } 
+
 .color{
     fill:var(--main-color);
-    stroke:var(--main-color);
-    transition: fill ease-in-out .5s, stroke ease-in-out .5s;
+    transition: fill .4s ease-in-out, stroke .4s ease-in-out;
 }
 
 .inverted{
     fill:black;
-    transition: fill .6s;
+    transition: fill .4s ease-in-out;;
 }
 .button-text{
     text-anchor:middle;
     dominant-baseline:central;
     fill:black;
-    transition: fill .5s;
+    transition: fill .4s ease-in-out;;
 }
-.button-text tspan{
+
+.button-text-inverted{
+    text-anchor:middle;
+    dominant-baseline:central;
+    fill:white;
+    transition: fill .4s ease-in-out;;
+}
+.button-text-inverted, .button-text tspan{
     text-transform: uppercase;
     font-weight: 600;
 }
 
-.rounded-button:hover ~ mask .button-text{
-    fill:white;
-    transition: fill .5s;
-    
-}
-
-.rounded-button:hover ~ mask .rounded-button{
-    fill:black;
-}
-
-.rounded-button:hover ~ mask .inverted{
-    fill:white;
-    transition: fill .5s;
-}
+.rounded-button:hover ~ mask .button-text-inverted,
+.rounded-button:hover ~ mask .rounded-button,
 .rounded-button:hover ~ mask path{
     fill:black;
-    transition: fill .5s;
+    transition: fill .4s ease-in-out;;
 }
 
-
-/*NEWS BUTTON*/
-.news-button{
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
-    left: 6.5rem;
-    padding: 0px;
-    z-index: 600;
-    transition: transform .4s ease-in-out;
-    pointer-events: all;
+.rounded-button:hover ~ mask .inverted,
+.rounded-button:hover ~ mask .button-text{
+    fill:white;
+    transition: fill .4s ease-in-out;;
 }
 
-.cross{
-    transform: translateX(1.2rem);
-    transition: transform .4s ease-in-out;
-}
-.news-button .bar {
-    --news-bar-length: 15px;
-    --news-bar-thickness: 5px;
-    --news-bar-offset:calc(15px);
-    --news-cross-length:calc(2 * (var(--news-bar-length) - var(--news-bar-thickness) * .5));
-    position:relative;
-    opacity: 0.4;
-    width: var(--news-bar-length);
-    height: var(--news-bar-thickness);
-    background-color: #fff;
-    border-radius: 10px 0px 0px 10px;
-    top:15px;
-    left:2px;
-    left:calc((var(--news-bar-thickness) * sqrt(2)/2) - var(--news-bar-length) + var(--news-bar-offset));
-    transform-origin: left;
-    transform: translateX(calc((1 - sqrt(2)/2) * var(--news-bar-length) - (sqrt(2) / 4) *  var(--news-bar-thickness) + 4px)) translateY(calc(var(--news-bar-thickness) * (-.5) - sqrt(2) * (var(--news-bar-thickness) * .5 - var(--news-bar-length)) /2)) rotate(315deg);
-    pointer-events: none;
-    transition: transform .4s, width .3s ease-in-out .3s, border-radius .4s ease-in-out;
-    
-}
-
-.news-button:hover .bar{
-    transform:  scale(1.4) translateX(calc((1 - sqrt(2)/2) * var(--news-bar-length) - (sqrt(2) / 4) *  var(--news-bar-thickness) - 2%)) translateY(calc(var(--news-bar-thickness) * (-.5) - sqrt(2) * (var(--news-bar-thickness) * .5 - var(--news-bar-length)) /2)) rotate(315deg);
-    transition: transform .4s, width .3s ease-in-out .3s, border-radius .4s ease-in-out;
-}
-
-.news-button .bar:after{
-    content: "";
-    position: absolute;
-    width: var(--news-bar-length);
-    height: var(--news-bar-thickness);
-    transform-origin: left;
-    transform: translateY(calc(var(--news-bar-thickness)*.5 - var(--news-bar-length))) translateX(calc(var(--news-bar-length) - var(--news-bar-thickness)*.5)) rotate(90deg);
-    background-color: #fff;
-    border-radius: 10px 0px 0px 10px;
-    transition: transform .4s, width .3s ease-in-out .3s, border-radius .4s ease-in-out;
-}
-
-.cross .bar {
-    width:var(--news-cross-length);
-    left:calc((var(--news-bar-thickness) * sqrt(2)/2) - var(--news-bar-length) + var(--news-bar-offset));
-    transform: translateX(calc((1 - sqrt(2)/2) * var(--news-bar-length) - (sqrt(2) / 4) *  var(--news-bar-thickness))) translateY(calc(var(--news-bar-thickness) * (-.5) - sqrt(2) * (var(--news-bar-thickness) * .5 - var(--news-bar-length)) /2)) rotate(315deg);
-    border-radius: 10px 10px 10px 10px;
-    pointer-events: none;
-    margin-left: 0px;
-    transition: transform .4s, width .3s ease-in-out .3s, border-radius .4s ease-in-out;
-}
-
-.cross:hover .bar{
-    transform:  scale(1.4) translateX(calc((1 - sqrt(2)/2) * var(--news-bar-length) - (sqrt(2) / 4) *  var(--news-bar-thickness) - 12.5%)) translateY(calc(var(--news-bar-thickness) * (-.5) - sqrt(2) * (var(--news-bar-thickness) * .5 - var(--news-bar-length)) /2)) rotate(315deg);
-    transition: transform .4s, width .3s ease-in-out .3s, border-radius .4s ease-in-out;
-}
-
-.cross .bar:after{
-    width:var(--news-cross-length);
-    border-radius: 10px;
-    transition: transform .4s, width .3s ease-in-out .3s, border-radius .4s ease-in-out;
+@media screen and (max-width:600px){
+    .svg_button{
+        transform: scale(.8);
+        transition: .4s;
+    }
 }

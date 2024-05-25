@@ -14,11 +14,24 @@ header{
 
 .scrolled{
     background-color: var(--text-color);
-    padding-top: .5rem;
-    padding-bottom: .5rem;
+    padding-top: .6rem;
+    padding-bottom: .6rem;
     transition: .4s ease-in-out;
     color: var(--palette-first);
     box-shadow:  0px 0px 10px 5px rgba(0, 0, 0, .8);
+}
+
+header .lockscreen_menu{
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: var(--palette-first);
+    opacity: 0;
+    z-index: 0;
+    transition: opacity .5s;
+    pointer-events: none;
 }
 
 header nav{
@@ -83,7 +96,7 @@ header nav .nav_menu .ham-menu span:nth-child(2){
 
 header nav .nav_menu .ham-open span:nth-child(1){
     transform: translateY(-75%) rotate(225deg);
-    transition: all .4s, transform .3 ease-in-out;
+    transition: all .4s, transform .3s ease-in-out;
 }
 
 header nav .nav_menu .ham-open span:nth-child(3){
@@ -122,36 +135,12 @@ header nav .nav_menu .nav_list{
 }
 
 header nav .nav_menu .nav_list .nav_item a{
-    transition: .5s;
+    transition: .4s;
 }
 
 header nav .nav_menu .nav_list .nav_item a:hover{
     color: var(--main-color);
 }
-
-/*
-
-header nav .non-touch:hover{
-    color: var(--main-color);
-    transition: .4s;
-}
-header .menu .non-touch:hover{
-    color: var(--main-color);
-    transition: .4s;
-}
-
-
-header .menu .active{
-    color:var(--main-color);
-}
-
-header .menu{
-    gap:1.5rem;
-    display: flex;
-    flex-direction: row;
-}
-*/
-
 
 .scrolled nav a{
     color: var(--palette-first);
@@ -160,7 +149,6 @@ header .menu{
 @media screen and (max-width:900px){
     header{
         padding: .6rem 2rem;
-        padding-bottom: 1rem;
     }
     .scrolled{
         padding: .6rem 2rem;
@@ -168,6 +156,13 @@ header .menu{
 }
 
 @media screen and (max-width:800px){
+
+    .header_open .lockscreen_menu{
+        opacity: .7;
+        pointer-events: all;
+        visibility: visible;
+        transition: opacity .5s;
+    }
     .scrolled nav .nav_menu .ham-menu span{
         background-color: var(--palette-first);
     }
@@ -183,7 +178,7 @@ header .menu{
         top: -15rem;
         left: 0%;
         width: 100%;
-        padding-top: 3.5rem;
+        padding-top: 1.5rem;
         pointer-events: none;
         padding-bottom: 1.5rem;
         border-bottom-left-radius: .5rem;

@@ -23,6 +23,33 @@ const researchTemplate = (id,title,description,photo,link) => `
     </div>
 `;
 
+
+var socialsData =[
+    { id: 1, link: "https://arxiv.org/search/math?searchtype=author&query=Benatti,+L", icon: "arxiv" },
+    { id: 2, link: "https://scholar.google.com/citations?view_op=list_works&hl=it&user=v9uPo6IAAAAJ&gmla=AJsN-F5ZHMc5Eww_QoxsmD7pzyV3_g99e3iIqCUhCY_8_EuMC3AAsJfswOj-CbSQMDhbPEOAsJeTdX6aqMAJHkhr49GfC7_5kAS6AHdeuacwfA9vo2hll4RUxJRln31FVVomVbGQRAop", icon: "google" },
+    { id: 3, link: "https://orcid.org/0000-0002-4685-7443", icon: "orcid" },
+    { id: 4, link: "https://cvgmt.sns.it/person/3317/", icon: "cvgmt" },
+    { id: 5, link: "https://www.researchgate.net/profile/Luca-Benatti", icon: "rgate" }
+];
+
+const socialTemplates = (id,link,icon) => `
+    <div class="svg_button">
+        <svg style="margin:-1px;" width="50px" height="50px" viewBox="0 0 64 64">
+            <a href="${link}">
+                <rect class="rounded-button color" mask="url(#${id}-mask)" vector-effect="non-scaling-stroke"></rect>
+                <mask id="${id}-mask">
+                    <rect class="rounded-button inverted" vector-effect="non-scaling-stroke"></rect>
+                    <path class="icon-${icon}" width="20%"></path>
+                </mask>
+            </a>
+        </svg>
+    </div>
+`;
+socialsData.forEach(social => {
+    const istance = socialTemplates(social.id,social.link,social.icon);
+    document.getElementById("socialButtons").innerHTML +=istance;
+});
+
 const paperTemplate = (id,title,coauthors,journal,year,url) => {
     let coauthorsTemplate =``;
     if(coauthors!==null){

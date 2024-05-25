@@ -8,16 +8,19 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Roboto:400,700&display=swap"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="buttons.css">
     <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="home.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="sql-wasm.js"></script>
 </head>
 <body>
-    <header>
-
+    <header>   
+        <div class="lockscreen_menu"></div>
         <nav>
             <div class="nav_menu">
+                
                 <a class="name" tabindex="1" href="#Home" class="">
                     <light>Luca</light> Benatti
                 </a>
@@ -42,28 +45,62 @@
                     <span></span>
                 </div>
             </div>
-<!--
-            <div class="menu">
-                <a tabindex="2" href="#Research" class="non-touch" onclick="backToBio()">Research</a>
-                <a tabindex="3" href="#Talks" class="non-touch" onclick="backToBio()">Talks</a>
-                <a tabindex="4" href="#Organization" class="non-touch" onclick="backToBio()">Organization</a>
-                <a tabindex="5" href="#Teaching" class="non-touch" onclick="backToBio()">Teaching</a>
-            </div>
-
-            <div>
-            
-            </div>
--->
         </nav>
 
     </header>
-    
-    <section style="height: 50rem;">
-        
-    
+    <div class="parallax-bg"></div>
+    <section id="Home">
+        <div class="container layout-centred">
+            <div id="biopic" class="glass-box">
+                <div id="biography">
+                    <h1>Hi, I'm <span>Luca Benatti</span></h1>
+                    <h2>Post-doc in mathematics at University of Pisa.</h2>
+                    <p>
+                        My research is in <em>Geometric Analysis</em> and <em>Mathematical General Relativity</em>. I am interested in analytic and geometric problems that arise from the study of partial differential equations.
+                    </p>
+                    <div id="socialButtons" class="social-buttons"></div>
+                    <div class="text-buttons">
+                    <div class="svg_button" style="width: 10.5rem; height: 2.5rem;">
+                       <svg style="margin:-1px;">
+                            <a id="afterNB" href="https://drive.google.com/file/d/1DynzRB6gRd3zeeAB1ZkkZq8h5Ej5vSVd/view?usp=sharing">
+                                <rect class="rounded-button color" mask="url(#CV-mask)"  vector-effect="non-scaling-stroke"></rect>
+                                <mask id="CV-mask">
+                                    <rect class="rounded-button inverted"  vector-effect="non-scaling-stroke"></rect>
+                                    <text class="button-text-inverted" dx="50%" dy="50%">
+                                        <tspan>Download CV</tspan>
+                                    </text>
+
+                                </mask>
+                            </a>
+                        </svg>
+                    </div>
+                    <div  class="svg_button" style="width: 10.5rem; height: 2.5rem;">
+                            <svg style="margin:-1px;">
+                                <a href="mailto:luca.benatti@dm.unipi.it">
+                                    <rect class="rounded-button color" mask="url(#mailto-mask)" stroke="0pt"  vector-effect="non-scaling-stroke"></rect>
+                                    <mask id="mailto-mask">
+                                        <rect class="rounded-button"  vector-effect="non-scaling-stroke" stroke="0pt"></rect>
+                                        <text class="button-text" dx="50%" dy="50%">
+                                            <tspan>Contact me</tspan>
+                                        </text>
+                                    </mask>
+                                </a>
+                            </svg>
+                        </div>
+                    </div> 
+                </div>
+
+                <div id="profilepicture">
+                    <img src="img/profilepicture.png"/><!---filter: brightness(85%)--->
+                </div>
+            </div>
+        </div>
+        <div class="shadow"></div>
     </section>
-    <section>
+    <section id="Research">
     </section>
     
+    <script type="text/javascript" src="index.js"></script>
     <script type="text/javascript" src="menu.js"></script>
+    <script type="text/javascript" src="templates.js"></script>
 </body>

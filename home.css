@@ -1,0 +1,105 @@
+#Home{
+    background-color: transparent;
+    height: 100vh;
+}
+#biopic{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#biography{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 60%;
+    height: 100%;
+    padding: 2rem 1rem;
+    gap:.5rem;
+}
+
+#profilepicture{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+}
+
+#profilepicture img{
+    object-fit:contain; 
+    position: relative; 
+    width: 100%; 
+    height: 100%;
+}
+
+.social-buttons{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    margin-top:2rem!important; 
+    transition: .4s;
+}
+
+.text-buttons{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    margin-top: 2rem!important;
+}
+
+
+
+.title{
+    width: 100%;
+    padding: 2rem;
+    opacity: 0;
+}
+
+
+@media screen and (max-width:800px){
+    #Home{
+        height: 55rem;
+    }
+    #biopic{
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+    }
+    #profilepicture{
+        height: 40%;
+        width: 100%;
+        padding: 0rem;
+    }
+    
+    #biography{
+        width: 100%;
+    }
+    .social-buttons{
+        margin-top:1rem!important;
+        flex-direction: row;
+        align-self: center;
+    }
+    .text-buttons{
+        margin-top:0rem!important;
+        align-self: center;
+        
+    }
+}
+
+@media screen and (max-width:600px){
+    .social-buttons{
+        margin-top:1rem!important;
+        flex-direction: row;
+        gap:0rem;
+        align-self: center;
+    }
+    .text-buttons{
+        margin-top:0rem!important;
+        gap:0rem;
+        align-self: center;
+        
+    }
+}
