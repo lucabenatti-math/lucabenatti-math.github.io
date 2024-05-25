@@ -67,7 +67,6 @@ section{
     height: auto; 
     background: var(--palette-first);
     color: var(--text-color);
-    padding: 3rem 7rem;
     position: relative;
 }
 .container{
