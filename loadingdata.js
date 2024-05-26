@@ -44,7 +44,6 @@ async function loadData() {
         }
     
         // SWIPER FOR SELECTED TALKS
-        const autoplay = document.querySelector(".autoplay-progress");
         const progressLine = document.querySelector(".autoplay-progress svg line");
         const talkSwiper = new Swiper(".talks", {
             loop:true,
@@ -102,16 +101,7 @@ async function loadData() {
                     slides.forEach((slide,i) => {
                         slide.querySelector(".talk-wrapper").style.transitionDuration =`${duration}ms`; });
                 },
-                autoplayTimeLeft(s, time, progress) {
-                    if(progress>=1){
-                        autoplay.style.opacity=0;
-                    } else if (progress<1.5){
-                        autoplay.style.opacity=Math.max(10*(progress-.05));
-                    } else if(progress >.8) {
-                        autoplay.style.opacity=(1 - progress)*5;
-                    }
-                    
-                }  
+
             }
         });
 }
