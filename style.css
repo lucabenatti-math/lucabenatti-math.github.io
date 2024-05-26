@@ -25,6 +25,11 @@ html{
 }
 
 
+svg {
+  -webkit-transform: translate(0px,0px); /* Safari and Chrome */
+}
+
+
 h1{
     font-size: 2rem;
 }
