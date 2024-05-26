@@ -44,6 +44,7 @@ async function loadData() {
         }
     
         // SWIPER FOR SELECTED TALKS
+        const autoplay = document.querySelector(".autoplay-progress");
         const progressLine = document.querySelector(".autoplay-progress svg line");
         const talkSwiper = new Swiper(".talks", {
             loop:true,
@@ -103,15 +104,13 @@ async function loadData() {
                 },
                 autoplayTimeLeft(s, time, progress) {
                     if(progress>=1){
-                        progressLine.style.opacity=0;
+                        autoplay.style.opacity=0;
                     } else if (progress<1.5){
-                        progressLine.style.opacity=Math.max(10*(progress-.05));
+                        autoplay.style.opacity=Math.max(10*(progress-.05));
                     } else if(progress >.8) {
-                        progressLine.style.opacity=(1 - progress)*5;
+                        autoplay.style.opacity=(1 - progress)*5;
                     }
                     
-                    progressLine.x1.baseVal.value = 3+40*progress;
-                    progressLine.x2.baseVal.value = 83-40*progress;
                 }  
             }
         });
