@@ -8,17 +8,19 @@ const researchTemplate = (id,title,description,photo,link) => `
                 <h2>${title}</h2>
                 <p>${description}</p>
             </div>
-            <svg width="7rem" height="2.5rem">
-                <a href="${link}">
-                    <rect class="rounded-button color" mask="url(#${id}seemore)"  vector-effect="non-scaling-stroke"></rect>
-                    <mask id="${id}seemore">
-                        <rect class="rounded-button"  vector-effect="non-scaling-stroke"></rect>
-                        <text class="button-text" dx="50%" dy="50%">
-                            <tspan>See more</tspan>
-                        </text>
-                    </mask>
-                </a>
-            </svg>
+            <div  class="svg_button" style="width:7rem;"  data-aligned="left">
+                <svg width="7rem" height="2.5rem" viewBox="-70 -25 140 50">
+                    <a href="${link}">
+                        <rect x="-70 " y="-25" width="140" height="50" fill="var(--main-color)" mask="url(#${id}seemore)" stroke="0pt"  vector-effect="non-scaling-stroke"></rect> 
+                        <mask id="${id}seemore">
+                            <rect x="-70" y="-25" width="140" height="50" vector-effect="non-scaling-stroke" stroke="0pt" fill="black"></rect>
+                            <text text-anchor="middle" dominant-baseline="central" fill="white" font-weight="600">
+                                SEE MORE
+                            </text>
+                        </mask>
+                    </a>
+                </svg>
+            </div>
         </div>
     </div>
 `;

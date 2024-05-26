@@ -1,11 +1,32 @@
 #Home{
     background-color: transparent;
-    height: 100vh;
+    height: auto;
 }
+
+#news{
+    background-color:  rgba(255,28,41,.2);
+    display: inline-block;
+    border: solid 2px rgba(255,28,41,.4);
+    margin-bottom: 1rem;
+    padding: 1rem 3rem;
+}
+
+#news h1{
+    font-size: 1rem;
+    display: inline;
+}
+
+#news h2{
+    display: inline;
+    font-size:1rem;
+    font-weight: 300;
+}
+
 #biopic{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
 }
 
 #biography{

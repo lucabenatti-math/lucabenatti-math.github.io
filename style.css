@@ -62,6 +62,10 @@ up{
     text-transform: uppercase;
 }
 
+uline{
+    text-decoration:underline;
+}
+
 section{
     width: 100%;
     height: auto; 
@@ -111,6 +115,23 @@ section{
     z-index: 30;
     pointer-events: none;
     background: linear-gradient(to top, var(--palette-first), transparent);
+}
+
+bar{
+    max-width: 30rem;
+    min-height: .2rem;
+    width:50%;
+    height: .2rem;
+    background-color: var(--text-color);
+    margin:1rem 0rem;
+}
+
+
+.layout-centred{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 @media screen and (max-width:900px){

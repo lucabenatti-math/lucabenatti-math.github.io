@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="buttons.css">
     <link rel="stylesheet" href="menu.css">
     <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="research.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="sql-wasm.js"></script>
@@ -51,6 +52,9 @@
     <div class="parallax-bg"></div>
     <section id="Home">
         <div class="container layout-centred">
+            <div id="news" class="glass-box">
+                <h1><uline>NEWS</uline>:</h1> <h2> Pisan Workshop 5-7 September 2024. More information here.</h2>
+            </div>
             <div id="biopic" class="glass-box">
                 <div id="biography">
                     <h1>Hi, I'm <span>Luca Benatti</span></h1>
@@ -60,20 +64,20 @@
                     </p>
                     <div id="socialButtons" class="social-buttons"></div>
                     <div class="text-buttons">
-                    <div  class="svg_button">
-                            <svg width="10rem" height="2.5rem" viewBox="-100 -25 200 50">
-                            <a id="afterNB" href="https://drive.google.com/file/d/1DynzRB6gRd3zeeAB1ZkkZq8h5Ej5vSVd/view?usp=sharing">
-                                <rect x="-100" y="-25" width="200" height="50" fill="var(--main-color)" mask="url(#CV-mask)" stroke="0pt"  vector-effect="non-scaling-stroke"></rect>
-                                <mask id="CV-mask">
-                                    <rect x="-100" y="-25" width="200" height="50" vector-effect="non-scaling-stroke" stroke="0pt" fill="black"></rect>
-                                    <text text-anchor="middle" dominant-baseline="central" fill="white" font-weight="600">
-                                        DOWNLOAD CV
-                                    </text>
-                                </mask>
-                            </a>
-                        </svg>
-                    </div>
-                    <div  class="svg_button">
+                        <div  class="svg_button">
+                                <svg width="10rem" height="2.5rem" viewBox="-100 -25 200 50">
+                                <a id="afterNB" href="https://drive.google.com/file/d/1DynzRB6gRd3zeeAB1ZkkZq8h5Ej5vSVd/view?usp=sharing">
+                                    <rect x="-100" y="-25" width="200" height="50" fill="var(--main-color)" mask="url(#CV-mask)" stroke="0pt"  vector-effect="non-scaling-stroke"></rect>
+                                    <mask id="CV-mask">
+                                        <rect x="-100" y="-25" width="200" height="50" vector-effect="non-scaling-stroke" stroke="0pt" fill="black"></rect>
+                                        <text text-anchor="middle" dominant-baseline="central" fill="white" font-weight="600">
+                                            DOWNLOAD CV
+                                        </text>
+                                    </mask>
+                                </a>
+                            </svg>
+                        </div>
+                        <div  class="svg_button">
                             <svg width="10rem" height="2.5rem" viewBox="-100 -25 200 50">
                                 <a href="mailto:luca.benatti@dm.unipi.it">
                                     <rect x="-100" y="-25" width="200" height="50" fill="var(--main-color)" mask="url(#mailto-mask)" stroke="0pt"  vector-effect="non-scaling-stroke"></rect>
@@ -97,6 +101,13 @@
         <div class="shadow"></div>
     </section>
     <section id="Research">
+        <div class="container layout-centred">
+            <h2><up>Research</up></h2>
+            <bar></bar>
+            <div id="wrapperResearch" class="research-grid">
+                <!--ADD LINES-->
+            </div>
+        </div>
     </section>
     
     <script type="text/javascript" src="index.js"></script>
