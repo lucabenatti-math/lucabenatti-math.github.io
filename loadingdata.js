@@ -109,8 +109,6 @@ async function loadData() {
                     } else if(progress >.8) {
                         progressLine.style.opacity=(1 - progress)*5;
                     }
-                    progressLine.x1.baseVal.value = 3+40*progress;
-                    progressLine.x2.baseVal.value = 83-40*progress;
                 }  
             }
         });
