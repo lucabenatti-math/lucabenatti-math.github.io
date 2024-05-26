@@ -128,6 +128,13 @@ bar{
     margin:1rem 0rem;
 }
 
+.container{
+    position: relative;
+    width: 100%;
+    height:100%;
+    overflow: visible;
+}
+
 
 .layout-centred{
     display: flex;
