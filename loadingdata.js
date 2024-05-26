@@ -22,17 +22,17 @@ async function loadData() {
             var result = results[1].values[i];
             document.getElementById("wrapperPapers").innerHTML += paperTemplate(result[0],result[1],result[2],result[3],result[4],result[5]);
         }
-//        var nTalks = results[2].values.length;
-//        for(var j = 0; j<2; j++){
-//            var result = results[2].values[nTalks-2];
-//            document.getElementById("wrapperTalks").innerHTML+= talkTemplate(result[0]+1000*j,result[1],result[2],formatDate(result[3]),result[4],result[5],result[7],result[8]);
-//            var result = results[2].values[nTalks-1]; 
-//            document.getElementById("wrapperTalks").innerHTML+= talkTemplate(result[0]+1000*j,result[1],result[2],formatDate(result[3]),result[4],result[5],result[7],result[8]);
-//            for(let i=2; i<results[2].values.length; i++){
-//                var result = results[2].values[i-2]; 
-//                document.getElementById("wrapperTalks").innerHTML+= talkTemplate(result[0]+1000*j,result[1],result[2],formatDate(result[3]),result[4],result[5],result[7],result[8]);
-//            }
-//        }
+        var nTalks = results[2].values.length;
+        for(var j = 0; j<2; j++){
+            var result = results[2].values[nTalks-2];
+            document.getElementById("wrapperTalks").innerHTML+= talkTemplate(result[0]+1000*j,result[1],result[2],formatDate(result[3]),result[4],result[5],result[7],result[8]);
+            var result = results[2].values[nTalks-1]; 
+            document.getElementById("wrapperTalks").innerHTML+= talkTemplate(result[0]+1000*j,result[1],result[2],formatDate(result[3]),result[4],result[5],result[7],result[8]);
+            for(let i=2; i<results[2].values.length; i++){
+                var result = results[2].values[i-2]; 
+                document.getElementById("wrapperTalks").innerHTML+= talkTemplate(result[0]+1000*j,result[1],result[2],formatDate(result[3]),result[4],result[5],result[7],result[8]);
+            }
+        }
         var nSocial = results[5].values.length;
         for(let i=0; i<nSocial; i++){
             var result = results[5].values[i]; 
@@ -44,74 +44,77 @@ async function loadData() {
         }
     
         // SWIPER FOR SELECTED TALKS
-//        const progressLine = document.querySelector(".autoplay-progress svg line");
-//        const talkSwiper = new Swiper(".talks", {
-//            loop:true,
-//            effect:"coverflow",
-//            loopAdditionalSlides:4,
-//            spaceBetween:0,
-//            coverflowEffect: {
-//                rotate: 0,
-//                stretch: 0,
-//                depth: 200,
-//                modifier: 1,
-//                slideShadows: false,
-//            },
-//            initialSlide:2,
-//            slidesPerView:"auto",
-//            watchSlidesVisibility: true,
-//            centeredSlides:true,
-//            touchMoveStopPropagation:true,
-//            simulateTouch:true,
-//            keyboard:true,
-//            pagination: {
-//                el: ".talks-pagination",
-//                clickable: true,
-//            },
-//            autoplay: {
-//                delay: 3000, // Delay between transitions in milliseconds
-//                pauseOnMouseEnter: true,// Set to true to disable autoplay on user interaction
-//            },   
-//            navigation: {
-//                nextEl: ".talks-button-next",
-//                prevEl: ".talks-button-prev"
-//            },
-//            on: {
-//                setTranslate: function () {
-//                    // THIS CODE IS MODIFIED STARTING FROM THE ORIGINAL CODE BY SWIPER JS //
-//                    const { width: swiperWidth, height: swiperHeight, slides, slidesSizesGrid } = this;
-//                    const params = this.params.coverflowEffect;
-//                    const transform = this.translate;
-//                    const center =  -transform + swiperWidth / 2;
-//                    slides.forEach((slide,i) => {
-//                        const slideOffset = slide.swiperSlideOffset;
-//                        const slideSize = slidesSizesGrid[i];
-//                        const translate = params.depth;
-//                        const centerOffset = (center - slideOffset - slideSize / 2) / slideSize;
-//                        const offsetMultiplier =
-//                            typeof params.modifier === "function"
-//                                ? params.modifier(centerOffset)
-//                                : centerOffset * params.modifier;
-//                        let translateZ = -translate * Math.abs(offsetMultiplier);
-//                            slide.querySelector(".talk-wrapper").style.opacity= Math.min(Math.max(1+translateZ/600,0),1);
-//                    });
-//                },
-//                setTransition: function (duration) {
-//                    var slides = this.slides;
-//                    slides.forEach((slide,i) => {
-//                        slide.querySelector(".talk-wrapper").style.transitionDuration =`${duration}ms`; });
-//                },
-//                autoplayTimeLeft(s, time, progress) {
-//                    if(progress>=1){
-//                        progressLine.style.opacity=0;
-//                    } else if (progress<1.5){
-//                        progressLine.style.opacity=Math.max(10*(progress-.05));
-//                    } else if(progress >.8) {
-//                        progressLine.style.opacity=(1 - progress)*5;
-//                    }
-//                }  
-//            }
-//        });
+        const progressLine = document.querySelector(".autoplay-progress svg line");
+        const talkSwiper = new Swiper(".talks", {
+            loop:true,
+            effect:"coverflow",
+            loopAdditionalSlides:4,
+            spaceBetween:0,
+            coverflowEffect: {
+                rotate: 0,
+                stretch: 0,
+                depth: 200,
+                modifier: 1,
+                slideShadows: false,
+            },
+            initialSlide:2,
+            slidesPerView:"auto",
+            watchSlidesVisibility: true,
+            centeredSlides:true,
+            touchMoveStopPropagation:true,
+            simulateTouch:true,
+            keyboard:true,
+            pagination: {
+                el: ".talks-pagination",
+                clickable: true,
+            },
+            autoplay: {
+                delay: 3000, // Delay between transitions in milliseconds
+                pauseOnMouseEnter: true,// Set to true to disable autoplay on user interaction
+            },   
+            navigation: {
+                nextEl: ".talks-button-next",
+                prevEl: ".talks-button-prev"
+            },
+            on: {
+                setTranslate: function () {
+                    // THIS CODE IS MODIFIED STARTING FROM THE ORIGINAL CODE BY SWIPER JS //
+                    const { width: swiperWidth, height: swiperHeight, slides, slidesSizesGrid } = this;
+                    const params = this.params.coverflowEffect;
+                    const transform = this.translate;
+                    const center =  -transform + swiperWidth / 2;
+                    slides.forEach((slide,i) => {
+                        const slideOffset = slide.swiperSlideOffset;
+                        const slideSize = slidesSizesGrid[i];
+                        const translate = params.depth;
+                        const centerOffset = (center - slideOffset - slideSize / 2) / slideSize;
+                        const offsetMultiplier =
+                            typeof params.modifier === "function"
+                                ? params.modifier(centerOffset)
+                                : centerOffset * params.modifier;
+                        let translateZ = -translate * Math.abs(offsetMultiplier);
+                            slide.querySelector(".talk-wrapper").style.opacity= Math.min(Math.max(1+translateZ/600,0),1);
+                    });
+                },
+                setTransition: function (duration) {
+                    var slides = this.slides;
+                    slides.forEach((slide,i) => {
+                        slide.querySelector(".talk-wrapper").style.transitionDuration =`${duration}ms`; });
+                },
+                autoplayTimeLeft(s, time, progress) {
+                    if(progress>=1){
+                        progressLine.style.opacity=0;
+                    } else if (progress<1.5){
+                        progressLine.style.opacity=Math.max(10*(progress-.05));
+                    } else if(progress >.8) {
+                        progressLine.style.opacity=(1 - progress)*5;
+                    }
+                    
+                    progressLine.x1.baseVal.value = 3+40*progress;
+                    progressLine.x2.baseVal.value = 83-40*progress;
+                }  
+            }
+        });
 }
 
 loadData();
