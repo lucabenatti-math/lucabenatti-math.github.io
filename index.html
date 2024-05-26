@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="menu.css">
     <link rel="stylesheet" href="home.css">
     <link rel="stylesheet" href="research.css">
+    <link rel="stylesheet" href="talks.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="sql-wasm.js"></script>
@@ -109,9 +110,57 @@
             </div>
         </div>
     </section>
+    <section id="Papers"> <!--- style="background-color: var(--palette-second);">--->
+        <div class="container layout-centred">
+            <h3 style="text-align: center;">List of papers</h3>
+            <div class="papers-list">
+                <ul id="wrapperPapers">
+                </ul>
+            </div>
+            <div class="papers-button">
+                <svg viewBox="0 0 6 4"  style="overflow: visible;">
+                    <polyline points=".5,.5 3,3 5.5,.5" fill="none" stroke-linejoin="miter" stroke="var(--text-light-second)" stroke-width="1" stroke-linecap="round">
+                            <animateTransform attributeName="transform" attributeType="XML"
+                                  type="translate" from="0 0" to="0 0" dur="2s" repeatCount="1"
+                                  values="0,0 0,0 0,0; -2.5,2.5 -2.5,-1 2.5,2.5" calcMode="spline"
+                                  keySplines=".5 0 .5 1; .5 0 .5 1" />
+                    </polyline>
+                </svg>
+            </div> 
+        </div>
+    </section>
+    <section id="Talks" style="background-color: var(--palette-second);" >
+        <div class="container layout-centred">
+            <h2><up>Selected talks</up></h2>
+            <bar></bar>
+            <div class="swiper talks">
+                <div id="wrapperTalks" class="swiper-wrapper">
+                </div> 
+                <div class="talks-button-next">
+                    <svg viewBox="0 0 4 6" style="overflow: visible;">
+                        <polyline points="0.5,0.5 3,3 0.5,5.5" fill="none" stroke-linejoin="miter" stroke="var(--main-color)" stroke-width="1" stroke-linecap="round"></polyline>
+                    </svg>
+                </div>
+                <div class="talks-button-prev">
+                    <svg viewBox="0 0 4 6"  style="overflow: visible;">
+                        <polyline points="3,0.5 .5,3 3,5.5" fill="none" stroke-linejoin="miter" stroke="var(--main-color)" stroke-width="1" stroke-linecap="round"></polyline>
+                    </svg>
+                </div>  
+            </div>           
+
+            <div class="autoplay-progress">
+              <svg viewBox="0 0 86 5">
+                <line y1="2.5" y2="2.5" stroke="var(--main-color)" stroke-width="4" stroke-linecap="round"></line>
+              </svg>
+            </div>
+        </div>
+    </section>
+           
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     
     <script type="text/javascript" src="index.js"></script>
-    <script type="text/javascript" src="menu.js"></script>
     <script type="text/javascript" src="templates.js"></script>
     <script type="text/javascript" src="loadingdata.js" async></script>
+    <script type="text/javascript" src="menu.js"></script>
+    <script type="text/javascript" src="research.js"></script>
 </body>

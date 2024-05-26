@@ -57,30 +57,34 @@ const talkTemplate = (id,title,location,date,event,photo,link_slides,link_video)
     let talk_button_slides = ``;
     let talk_button_video = ``;
     if(link_slides !== null){
-        talk_button_slides = `<svg class="talk-button" width="5.5rem" height="2.5rem">
+        talk_button_slides = `<div  class="svg_button" style="width:5.5rem; 2.5rem;">
+                <svg width="5.5rem" height="2.5rem" viewBox="-55 -25 110 50">
                     <a href="${link_slides}">
-                        <rect class="rounded-button color" mask="url(#${id}talkmask)"  vector-effect="non-scaling-stroke"></rect>
-                        <mask id="${id}talkmask">
-                            <rect class="rounded-button"  vector-effect="non-scaling-stroke"></rect>
-                            <text class="button-text" dx="50%" dy="50%">
-                                <tspan>slides</tspan>
+                        <rect x="-55 " y="-25" width="110" height="50" fill="var(--main-color)" mask="url(#${id}slides)" stroke="0pt"  vector-effect="non-scaling-stroke"></rect> 
+                        <mask id="${id}slides">
+                            <rect x="-55" y="-25" width="110" height="50" vector-effect="non-scaling-stroke" stroke="0pt" fill="black"></rect>
+                            <text text-anchor="middle" dominant-baseline="central" fill="white" font-weight="600">
+                                SLIDES
                             </text>
                         </mask>
                     </a>
-                </svg>`;
+                </svg>
+            </div>`;
     }
     if(link_video !== null){
-        talk_button_video = `<svg class="talk-button" width="5.5rem" height="2.5rem">
+        talk_button_video = `<div  class="svg_button" style="width:5.5rem; 2.5rem;">
+                <svg width="5.5rem" height="2.5rem" viewBox="-55 -25 110 50">
                     <a href="${link_video}">
-                        <rect class="rounded-button color" mask="url(#${id}talkmask-video)"  vector-effect="non-scaling-stroke"></rect>
-                        <mask id="${id}talkmask-video">
-                            <rect class="rounded-button"  vector-effect="non-scaling-stroke"></rect>
-                            <text class="button-text" dx="50%" dy="50%">
-                                <tspan>video</tspan>
+                        <rect x="-55 " y="-25" width="110" height="50" fill="var(--main-color)" mask="url(#${id}video)" stroke="0pt"  vector-effect="non-scaling-stroke"></rect> 
+                        <mask id="${id}video">
+                            <rect x="-55" y="-25" width="110" height="50" vector-effect="non-scaling-stroke" stroke="0pt" fill="black"></rect>
+                            <text text-anchor="middle" dominant-baseline="central" fill="white" font-weight="600">
+                                VIDEO
                             </text>
                         </mask>
                     </a>
-                </svg>`;
+                </svg>
+            </div>`;
     }
     return `<div class="swiper-slide">
         <div class="overlayed-color"></div>   

@@ -84,11 +84,11 @@ section{
 }
 
 .parallax-bg{
-    position: fixed;
+    position: absolute;
     left: -20px;
-    top: -20px;
+    bottom: -20px;
     width: 130%;
-    height: 130%;
+    min-height: 130%;
     -webkit-background-size: cover;
     background-size: cover;
     background-position: center;
@@ -100,10 +100,10 @@ section{
 .glass-box{
     height: 100%;
     width: 100%;
-    background-color: rgba(8,28,41,.7);
+    background-color: rgba(8,28,41,.9);
     opacity: 1;
     padding: 2rem 2rem;
-    box-shadow:  0px 0px 16px 0 rgba(0, 0, 0, .4), 0 12px 40px 0 rgba(0, 0, 0, .4);
+    box-shadow: 0 15px 15px 3px black;
     transition: 0.6s;
     border-radius: .5rem; 
 }
