@@ -1,12 +1,4 @@
-.research-grid{
-    display: grid;
-    justify-content: space-evenly;
-    align-content: space-around;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 1rem;
-    height: 100%;
-    transition: 2s;
-}
+
 .research-line{
     position: relative;
     display: flex;
