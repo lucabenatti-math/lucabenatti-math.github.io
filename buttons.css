@@ -25,7 +25,7 @@
     fill:black;
 }
 
-.svg_button a rect:hover ~ mask text tspan{
+.svg_button a rect:hover ~ mask text{
     fill:black;
 }
 
@@ -33,11 +33,11 @@
     fill:black;
 }
 
-.svg_button a rect:hover ~ mask text tspan[data-inverted="true"]{
+.svg_button a rect:hover ~ mask text[data-inverted="true"]{
     fill:white;
 }
 
-.svg_button a mask text tspan{
+.svg_button a mask text{
     text-transform: uppercase;
     font-weight: 600;
     transition: .4s;
