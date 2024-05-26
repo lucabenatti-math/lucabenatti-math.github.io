@@ -30,8 +30,8 @@ const socialTemplate = (id,icon,link) => `
             <a href="${link}">
                 <rect x="-30" y="-30" width="60" height="60" fill="var(--main-color)" mask="url(#${id}-mask)" vector-effect="non-scaling-stroke"></rect>
                 <mask id="${id}-mask">
-                    <rect   x="-30" y="-30" width="60" height="60" fill="white" vector-effect="non-scaling-stroke"></rect>
-                    <path d="${icon}"></path>
+                    <rect   x="-30" y="-30" width="60" height="60" fill="black" vector-effect="non-scaling-stroke"></rect>
+                    <path d="${icon}" fill="white"></path>
                 </mask>
             </a>
         </svg>
