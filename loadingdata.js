@@ -45,6 +45,7 @@ async function loadData() {
     
         // SWIPER FOR SELECTED TALKS
         const progressLine = document.querySelector(".autoplay-progress svg line");
+        const autoplayProgress = document.querySelector(".autoplay-progress");
         const talkSwiper = new Swiper(".talks", {
             loop:true,
             effect:"coverflow",
@@ -103,11 +104,11 @@ async function loadData() {
                 },
                 autoplayTimeLeft(s, time, progress) {
                     if(progress>=1){
-                        progressLine.style.opacity=0;
+                        autoplayProgress.style.opacity=0;
                     } else if (progress<1.5){
-                        progressLine.style.opacity=Math.max(10*(progress-.05));
+                        autoplayProgress.style.opacity=Math.max(10*(progress-.05));
                     } else if(progress >.8) {
-                        progressLine.style.opacity=(1 - progress)*5;
+                        autoplayProgress.style.opacity=(1 - progress)*5;
                     }
                     
                     progressLine.x1.baseVal.value = 3+40*progress;
