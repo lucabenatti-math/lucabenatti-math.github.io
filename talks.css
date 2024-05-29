@@ -146,7 +146,7 @@
 }
 
 
-svg path {
+.svg5 path {
   fill: none;
   stroke: #000;
   stroke-linecap: round;
@@ -154,7 +154,7 @@ svg path {
   transition: 0.2s;
 }
 
-.svg-5:hover path {
+.boink path {
   d: path("M3,3 L8,3 L2,5 L8,5 L3,7 L7,7");
 }
 
