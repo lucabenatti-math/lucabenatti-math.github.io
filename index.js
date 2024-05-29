@@ -28,3 +28,10 @@ function formatDate(inputDate) {
     // Return the formatted date string
     return formattedDate;
 }
+
+
+const svg5 = document.querySelector(".svg5");
+svg5.addEventListener("click", function () {
+    svg5.classList.toggle("boink");
+    console.log("proca");
+});
