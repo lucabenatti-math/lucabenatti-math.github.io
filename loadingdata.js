@@ -73,7 +73,7 @@ async function loadData() {
                 clickable: true,
             },
             autoplay: {
-                delay: 3000, // Delay between transitions in milliseconds
+                delay: 6000, // Delay between transitions in milliseconds
                 pauseOnMouseEnter: true,// Set to true to disable autoplay on user interaction
             },   
             navigation: {
@@ -108,15 +108,15 @@ async function loadData() {
                 autoplayTimeLeft(s, time, progress) {
                     const offset = strokeDasharray * progress;
                     progressBar.setAttribute("stroke-dashoffset", offset);
-                    if(progress >.8 && progress<1) {
-                        progressBar.style.transition = "opacity 0s";
-                        progressBar.style.opacity=(1 - progress)*5;
-                    } else if (progress <.04){
-                        progressBar.style.transition = "opacity .3s ease";
-                        progressBar.style.opacity=0;
-                    } else {
-                        progressBar.style.opacity=1;
-                    }
+//                    if(progress >.8 && progress<1) {
+//                        progressBar.style.transition = "opacity 0s";
+//                        progressBar.style.opacity=(1 - progress)*5;
+//                    } else if (progress <.04){
+//                        progressBar.style.transition = "opacity .3s ease";
+//                        progressBar.style.opacity=0;
+//                    } else {
+//                        progressBar.style.opacity=1;
+//                    }
                 //progressLine.setAttribute("x1", 3+40*progress+"px");
                 //progressLine.setAttribute("x2", 83-40*progress+"px");
                 }  
