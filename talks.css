@@ -195,6 +195,7 @@
     justify-self: center;
     transform-origin: top;
     z-index: 1;
+    transition: .3s ease-in-out;
 }
 .progress-circle svg{
     overflow: visible;
@@ -207,11 +208,11 @@
 
 .progress-bar{
     position: relative;
-    stroke:var(--main-color);
+    stroke:red;/*var(--main-color);*/
     stroke-width:.3rem;
     fill:transparent;
     transform-origin: center;
-    transform: rotate(-90deg);
+    transform: rotate(-87deg);
     transition: opacity .2s ease;
 }
 

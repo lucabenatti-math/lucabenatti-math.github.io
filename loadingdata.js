@@ -111,7 +111,7 @@ async function loadData() {
                     if(progress >.8 && progress<1) {
                         progressBar.style.transition = "opacity 0s";
                         progressBar.style.opacity=(1 - progress)*5;
-                    } else if (progress < .1){
+                    } else if (progress <.04){
                         progressBar.style.transition = "opacity .3s ease";
                         progressBar.style.opacity=0;
                     } else {
