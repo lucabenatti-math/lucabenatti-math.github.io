@@ -149,7 +149,7 @@
 
 .playpause{
     width: 30rem;
-    height: 30rem;
+    height: 30rem!important;
     background-color: white;
     clip-path: path('M  20  240 \
             L  20  80 L 160  80 \
