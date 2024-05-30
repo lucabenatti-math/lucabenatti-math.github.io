@@ -147,16 +147,23 @@
 
 
 
-.svg5{
-    width: 100%;
-    height: 100%;
+.playpause{
+    width: 30rem;
+    height: 30rem;
+    background-color: white;
+    clip-path: path('M  20  240 \
+            L  20  80 L 160  80 \
+            L 160  20 L 280 100 \
+            L 160 180 L 160 120 \
+            L 60 120 L  60 240 Z');
+    transition: .4s;
 }
-.svg5 path {
-  fill: none;
-  stroke: red;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  transition: 4s;
+.pause{
+    clip-path: path('M  20  120 \
+            L  20  80 L 160  80 \
+            L 160  20 L 280 100 \
+            L 160 180 L 160 120 \
+            L 60 120 L  60 120 Z');
 }
 
 @media screen and (max-width:800px){
