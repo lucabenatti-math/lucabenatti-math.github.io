@@ -153,7 +153,7 @@
 }
 .svg5 path {
   fill: none;
-  stroke: #000;
+  stroke: red;
   stroke-linecap: round;
   stroke-linejoin: round;
   transition: 4s;
