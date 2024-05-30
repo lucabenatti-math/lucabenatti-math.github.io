@@ -156,7 +156,7 @@
   stroke: #000;
   stroke-linecap: round;
   stroke-linejoin: round;
-  transition: 0.2s;
+  transition: 4s;
 }
 
 @media screen and (max-width:800px){
