@@ -208,7 +208,7 @@
 
 .progress-bar{
     position: relative;
-    stroke:red;/*var(--main-color);*/
+    stroke:var(--main-color);
     stroke-width:.3rem;
     fill:transparent;
     transform-origin: center;
