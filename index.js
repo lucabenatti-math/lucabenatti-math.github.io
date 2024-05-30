@@ -29,13 +29,10 @@ function formatDate(inputDate) {
     return formattedDate;
 }
 
+const playButton = document.querySelector(".playpause");
 
-const pathElement = document.getElementById("mypath");
-const animationElement = document.getElementById("pathAnimation");
-
-// Add click event listener to the path element
-pathElement.addEventListener("click", () => {
-    // Begin the animation
-    animationElement.beginElement();
+playButton.addEventListener("click", function () {
+    playButton.classList.toggle("pause");
 });
+
 
