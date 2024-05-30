@@ -82,7 +82,10 @@
     opacity: 0;
 }
 
-
+@media screen and (max-width:900px){
+    #news{
+        padding: 1rem;
+}
 @media screen and (max-width:800px){
     #Home{
         height: auto;

@@ -51,6 +51,7 @@ header nav .nav_menu{
     height: auto;
     flex-direction: row;
     justify-content: space-between;
+    align-content: flex-end;
 }
 
 header nav .nav_menu .ham-menu{

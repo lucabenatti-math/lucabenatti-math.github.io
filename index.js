@@ -29,10 +29,3 @@ function formatDate(inputDate) {
     return formattedDate;
 }
 
-const playButton = document.querySelector(".playpause");
-
-playButton.addEventListener("click", function () {
-    playButton.classList.toggle("pause");
-});
-
-

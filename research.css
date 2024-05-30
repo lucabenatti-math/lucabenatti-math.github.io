@@ -77,31 +77,36 @@
 }
 
 .papers-button{
-    width:1.5rem;
-    height:1.5rem;
-    overflow: visible;
-    cursor: pointer;
+    margin-top: .5rem;
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 1rem;
-    transform-origin: center;
-    transition:.5s ease-in-out;
+    width:1.5rem;
+    height:1.5rem;
+    z-index: 40;
 }
 .papers-button svg{
-    opacity: .7;
     width: 100%;
     height: 100%;
-    transition:.2s ease-in-out;
+    transform-origin: center;
+    cursor: pointer;
+    transition:.3s ease-in-out;
+}
+
+.papers-button svg polyline {
+    stroke:var(--text-light-second);
+    transition: .3s  ease-in-out;
 }
 
 .papers-button:hover svg{
-    opacity: 1;
     width: 120%;
     height: 120%;
-    transition:.2s ease-in-out;
-    
+}
+
+.papers-button:hover svg polyline {
+    stroke:var(--main-color);
 }
 
 @media screen and (max-width:1200px){

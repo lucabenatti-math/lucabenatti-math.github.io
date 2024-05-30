@@ -68,14 +68,24 @@
 
 .autoplay-progress {
     position: relative;
+    overflow: visible;
     z-index: 50;
-    width:10rem;
-    margin-top: 2rem;
-    height: 1rem;
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+    background-color: var(--text-color);
+    border-radius: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
+
+
+.autoplay-progress svg polyline{
+    stroke: var(--text-light-second);
+}
+
 
 .talks-buttons{
     display: flex;
@@ -109,62 +119,72 @@
     z-index: -1;
     pointer-events: none;
 }
-
+.button-container{
+    display: flex;
+    overflow: visible;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 2rem;
+    height: 2rem;
+}
 
 .talks-button-prev, .talks-button-next{
-    position: absolute;
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width:1.5rem;
-    height:1.5rem;
-    top:50%;
+    width:2rem;
+    height:2rem;
+    background-color: var(--text-color);
+    border-radius: 100%;
     z-index: 40;
-    transform: translateY(-50%);
+    transition: .3s;
 }
 .talks-button-prev svg, .talks-button-next svg{
     width: 100%;
     height: 100%;
-    opacity: .7;
     transform-origin: center;
     cursor: pointer;
-    transition:.2s ease-in-out;
+    transition:.3s ease-in-out;
 }
 
-.talks-button-prev:hover svg, .talks-button-next:hover svg{
-    opacity: 1;
-    width: 120%;
-    height: 120%;
-}
-.talks-button-prev{
-    right:88%;
-    
-}
-.talks-button-next{
-    left:88%;
+.talks-button-prev svg polyline, .talks-button-next svg polyline{
+    stroke: var(--text-light-second);
 }
 
+.talks-button-prev:hover, .talks-button-next:hover{
+    width: 2.4rem;
+    height: 2.4rem;
+}
+.talks-button-prev:hover svg polyline, .talks-button-next:hover svg polyline{
+    stroke: var(--main-color);
+}
 
-
-.playpause{
-    width: 30rem;
-    height: 30rem!important;
-    background-color: white;
-    clip-path: path('M  20  240 \
-            L  20  80 L 160  80 \
-            L 160  20 L 280 100 \
-            L 160 180 L 160 120 \
-            L 60 120 L  60 240 Z');
-    transition: .4s;
+.media-button{
+    position: relative;
+    transform-origin: center center;
+    transform:translate(3%)scale(30%);
+    height: 50px;
+    width: 50px;
+    transition: .3s ease-in-out;
 }
 .pause{
-    clip-path: path('M  20  120 \
-            L  20  80 L 160  80 \
-            L 160  20 L 280 100 \
-            L 160 180 L 160 120 \
-            L 60 120 L  60 120 Z');
+    transform:translate(0%)scale(30%);
 }
+.playpause{
+    width: 50px;
+    height: 50px;
+    background-color:  var(--text-light-second);
+    clip-path: path('M 0,5 Q 0,0 4.4720785,2.2360392 L 25,12.5  Q 25,12.5 25,12.5 L 25,37.5 Q 25,37.5 25,37.5 L 25,37.5 Q 25,37.5 25,37.5 L 25,12.5 Q 25,12.5 25,12.5 L 45,22.5 Q 45,22.5 45,22.5 Q 50,25 45,27.5 Q 45,27.5 45,27.5 L 25,37.5 L 25,37.5 L 4.4720785,47.7639608 Q 0,50 0,45 Z');
+    transition: .3s ease-in-out;
+}
+.pause .playpause{
+    clip-path: path('M 0,2.5 Q 0,0 2.5,0 L 17.5,0  Q 20,0 20,2.5 L 20,47.5 Q 20,50 17.5,50 L 32.5,50 Q 30,50 30,47.5 L 30,2.5 Q 30,0 32.5,0 L 47.5,0 Q 50,0 50,2.5 Q 50,25 50,47.5 Q 50,50 47.5,50 L32.5,50 L17.5,50 L2.5,50 Q 0,50 0,47.5 Z');
+}
+
+
 
 @media screen and (max-width:800px){
     .talks{

@@ -44,8 +44,8 @@ async function loadData() {
         }
     
         // SWIPER FOR SELECTED TALKS
-        const progressLine = document.querySelector(".autoplay-progress svg line");
-        const autoplayProgress = document.querySelector(".autoplay-progress");
+        //const progressLine = document.querySelector(".autoplay-progress svg line");
+        //const autoplayProgress = document.querySelector(".autoplay-progress");
         const talkSwiper = new Swiper(".talks", {
             loop:true,
             effect:"coverflow",
@@ -103,16 +103,15 @@ async function loadData() {
                         slide.querySelector(".talk-wrapper").style.transitionDuration =`${duration}ms`; });
                 },
                 autoplayTimeLeft(s, time, progress) {
-                    if(progress>=1){
-                        autoplayProgress.style.opacity=0;
-                    } else if (progress<1.5){
-                        autoplayProgress.style.opacity=Math.max(10*(progress-.05));
-                    } else if(progress >.8) {
-                        autoplayProgress.style.opacity=(1 - progress)*5;
-                    }
-                progressLine.setAttribute("x1",3+40*progress+"px");
-                progressLine.setAttribute("x2", 83-40*progress+"px");
-
+//                    if(progress>=1){
+//                        autoplayProgress.style.opacity=0;
+//                    } else if (progress<1.5){
+//                        autoplayProgress.style.opacity=Math.max(10*(progress-.05));
+//                    } else if(progress >.8) {
+//                        autoplayProgress.style.opacity=(1 - progress)*5;
+//                    }
+                //progressLine.setAttribute("x1", 3+40*progress+"px");
+                //progressLine.setAttribute("x2", 83-40*progress+"px");
                 }  
             }
         });

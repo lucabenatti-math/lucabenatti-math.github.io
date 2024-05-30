@@ -139,7 +139,10 @@ bar{
 
 @media screen and (max-width:900px){
     section{
-        padding-left: 2rem;
-        padding-right: 2rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+    .glass-box{
+        padding: 1rem;
     }
 }
