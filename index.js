@@ -30,8 +30,12 @@ function formatDate(inputDate) {
 }
 
 
-const svg5 = document.querySelector(".svg5");
-const svg5Path = document.querySelector(".svg5 path");
-svg5.addEventListener("click", function () {
-    svg5Path.setAttribute("d", "M3,3 L8,3 L2,5 L8,5 L3,7 L7,7");
+const pathElement = document.getElementById("mypath");
+const animationElement = document.getElementById("pathAnimation");
+
+// Add click event listener to the path element
+pathElement.addEventListener("click", () => {
+    // Begin the animation
+    animationElement.beginElement();
 });
+
