@@ -1,3 +1,6 @@
+const progressBar = document.querySelector(".progress-bar");
+const strokeDasharray = progressBar.getAttribute("stroke-dasharray");
+
 async function loadData() {
     try {
         // Load the SQLite database file directly
@@ -46,7 +49,7 @@ async function loadData() {
         // SWIPER FOR SELECTED TALKS
         //const progressLine = document.querySelector(".autoplay-progress svg line");
         //const autoplayProgress = document.querySelector(".autoplay-progress");
-        const talkSwiper = new Swiper(".talks", {
+        window.talkSwiper = new Swiper(".talks", {
             loop:true,
             effect:"coverflow",
             loopAdditionalSlides:4,
@@ -103,13 +106,17 @@ async function loadData() {
                         slide.querySelector(".talk-wrapper").style.transitionDuration =`${duration}ms`; });
                 },
                 autoplayTimeLeft(s, time, progress) {
-//                    if(progress>=1){
-//                        autoplayProgress.style.opacity=0;
-//                    } else if (progress<1.5){
-//                        autoplayProgress.style.opacity=Math.max(10*(progress-.05));
-//                    } else if(progress >.8) {
-//                        autoplayProgress.style.opacity=(1 - progress)*5;
-//                    }
+                    const offset = strokeDasharray * progress;
+                    progressBar.setAttribute("stroke-dashoffset", offset);
+                    if(progress >.8 && progress<1) {
+                        progressBar.style.transition = "opacity 0s";
+                        progressBar.style.opacity=(1 - progress)*5;
+                    } else if (progress < .1){
+                        progressBar.style.transition = "opacity .3s ease";
+                        progressBar.style.opacity=0;
+                    } else {
+                        progressBar.style.opacity=1;
+                    }
                 //progressLine.setAttribute("x1", 3+40*progress+"px");
                 //progressLine.setAttribute("x2", 83-40*progress+"px");
                 }  
@@ -118,3 +125,4 @@ async function loadData() {
 }
 
 loadData();
+
