@@ -209,7 +209,7 @@
 .progress-bar{
     position: relative;
     stroke:var(--main-color);
-    stroke-width:.3rem;
+    stroke-width:.4rem;
     fill:transparent;
     transform-origin: center;
     transform: rotate(-87deg);

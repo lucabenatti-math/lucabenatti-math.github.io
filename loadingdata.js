@@ -73,7 +73,7 @@ async function loadData() {
                 clickable: true,
             },
             autoplay: {
-                delay: 6000, // Delay between transitions in milliseconds
+                delay: 4500, // Delay between transitions in milliseconds
                 pauseOnMouseEnter: true,// Set to true to disable autoplay on user interaction
             },   
             navigation: {
