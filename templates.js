@@ -46,8 +46,8 @@ const paperTemplate = (id,title,coauthors,journal,year,url) => {
     if(coauthors!==null){
         coauthorsTemplate =`with ${coauthors}, `;
     }
-    return `<li style="font-size:1rem; color:var(--text-light-second);">
-        <a href="${url}" style="color:var(--text-color);text-decoration: underline;font-size:1.1rem;">${title}</a><br/>
+    return `<li style="font-size:1rem; color:var(--palette-light-second);">
+        <a href="${url}" style="color:var(--palette-first);text-decoration: underline;font-size:1.1rem;">${title}</a><br/>
         ${coauthorsTemplate}<em>${journal}</em> (${year}).
     </li>`
 };

@@ -167,9 +167,27 @@
     z-index: 2;
 }
 
+.media-button-shadow{
+    position: absolute;
+    width: 2.5rem;
+    height: 2.5rem;
+    box-shadow: 0 5px 10px 15px black;
+    border-radius: 100%;
+    z-index: 0;
+}
+
+.talks-buttons-shadow{
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    box-shadow: 0 2px 10px 8px black;
+    border-radius: 100%;
+    z-index: 0;
+    
+}
+
 
 .media-button:hover .playpause{
-    
     background-color:  var(--main-color);
     
 }

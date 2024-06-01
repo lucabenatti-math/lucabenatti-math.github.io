@@ -24,6 +24,7 @@ async function loadData() {
         for(let i=0; i<nPapers; i++){
             var result = results[1].values[i];
             document.getElementById("wrapperPapers").innerHTML += paperTemplate(result[0],result[1],result[2],result[3],result[4],result[5]);
+            document.getElementById("wrapperPapersModel").innerHTML += paperTemplate(result[0],result[1],result[2],result[3],result[4],result[5]);
         }
         var nTalks = results[2].values.length;
         for(var j = 0; j<2; j++){

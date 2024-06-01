@@ -112,16 +112,27 @@
     </section>
     <section id="Papers"> <!--- style="background-color: var(--palette-second);">--->
         <div class="container layout-centred">
-            <h3 style="text-align: center;">List of papers</h3>
-            <div class="papers-list">
-                <ul id="wrapperPapers">
+            <div class="paper-list-box">
+                <h3 class="list-paper-title">List of papers</h3>
+                <div class="papers-list">
+                    <ul id="wrapperPapers">
+                    </ul>
+                </div>
+                <div class="paper-button-container">
+                    <div class="papers-button">
+                        <svg viewBox="0 0 10 10"  style="overflow: visible;">
+                            <polyline points="2,4 5,7 8,4" fill="none" stroke-linejoin="miter"  stroke-width="1.5" stroke-linecap="round"></polyline>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div style="height:0rem; opacity: 0;pointer-events: none;z-index: 0;">
+                <ul id="wrapperPapersModel">
                 </ul>
             </div>
-            <div class="papers-button">
-                <svg viewBox="0 0 6 4"  style="overflow: visible;">
-                    <polyline points=".5,.5 3,3 5.5,.5" fill="none" stroke-linejoin="miter"  stroke-width="1" stroke-linecap="round"></polyline>
-                </svg>
-            </div> 
+            <div class="paper-shadow-container">
+                <div class="paper-button-shadow"></div>
+            </div>
         </div>
     </section>
     <section id="Talks" style="background-color: var(--palette-second);" >
@@ -133,7 +144,8 @@
                 </div> 
             </div>           
             <div style="display: flex; flex-direction: row; justify-content: center; align-items: flex-start;margin-top: 2rem; gap:1rem; width: 10rem;">
-            <div class="button-container">    
+            <div class="button-container">
+                <div class="talks-buttons-shadow"></div>
                 <div class="talks-button-prev">
                     <svg viewBox="0 0 10 10" style="overflow: visible;">
                         <polyline points="6,2 3,5 6,8" fill="none" stroke-linejoin="miter" stroke-width="1.5" stroke-linecap="round"></polyline>
@@ -141,6 +153,7 @@
                 </div>
             </div>
             <div class="autoplay-progress">
+                <div class="media-button-shadow"></div>
                 <div class="media-button">
                     <div class="playpause"></div>
                 </div>
@@ -151,7 +164,8 @@
                 </div>
 
             </div>  
-            <div class="button-container">   
+            <div class="button-container">  
+                <div class="talks-buttons-shadow"></div> 
                 <div class="talks-button-next">
                     <svg viewBox="0 0 10 10" style="overflow: visible;">
                         <polyline points="4,2 7,5 4,8" fill="none" stroke-linejoin="miter" stroke-width="1.5" stroke-linecap="round"></polyline>
@@ -162,6 +176,7 @@
         </div>
     </section>
     <section>
+
     </section>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     
