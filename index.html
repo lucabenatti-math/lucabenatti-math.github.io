@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Luca Benatti</title>
+        <script>
+          (function () {
+            // Retrieve the user's saved theme or fall back to the default (light)
+            const savedTheme = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = savedTheme || (prefersDark ? 'dark' : 'light');
+
+            // Apply the theme immediately
+            document.documentElement.setAttribute('theme', theme);
+          })();
+        </script>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Roboto:400,700&display=swap"/>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="icons.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="sql-wasm.js"></script>
+    </head>
+    
+    <body>
+       
+        
+        <header state="">    
+            <a href="#Home">
+                <h2>LUCA <b> BENATTI</b></h2>
+            </a>
+            <nav>   
+                <div id="Menu" state="close">
+                    <a href="#Home" class="active-link">
+                        HOME
+                    </a>
+                    <a href="#Research">
+                        RESEARCH
+                    </a>
+                    <a href="#Talks">
+                        TALKS
+                    </a>
+                    <a href="#Events">
+                        EVENTS
+                    </a>
+                    <a id="ContactMe" class="outlined" href="mailto:luca.benatti@dm.unipi.it">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" >
+                            <path class="chat-icon"></path>
+                        </svg>
+                        CONTACT ME
+                    </a>        
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="ChangeTheme">
+                    <path class="moon-icon"></path> 
+                    <path class="sun-icon"></path>
+                </svg>             
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="BurgerMenu" state="close" >
+                    <g><path class="burger-menu-line"></path></g>
+                    <g><path class="burger-menu-line"></path></g>
+                    <g><path class="burger-menu-line"></path></g>
+                </svg> 
+            </nav>
+        </header>
+        
+        <main>
+
+
+        <div class="background" style="overflow: hidden;">
+            <img class="parallax" src="assets/background/form-2.svg" data-parallax-speed="2" style="opacity: .5; left: 0; top:-15rem;"/>
+            <img class="parallax" src="assets/background/form-2.svg" data-parallax-speed="1" style="bottom:-90%; left:15rem;opacity: .5;"/>
+            <img class="parallax" src="assets/background/form-3.svg" data-parallax-speed="1.3" style="top:165rem;left:-10rem;opacity: .5; width: 55rem;"/>
+            <div class="parallax" data-parallax-speed="1.3" style="top:226rem; right:15rem;opacity: .5;">
+                <img src="assets/background/form-1.svg"/>   
+            </div>
+            <div class="parallax" data-parallax-speed="1.3" style="top:346rem; right:0rem;opacity: .5;">
+                <img src="assets/background/form-3.svg"/>   
+            </div>
+            <div class="parallax" data-parallax-speed="1.3" style="top:466rem; right:-10rem;opacity: .5;">
+                <img src="assets/background/form-2.svg" style="transform: rotate(180deg);"/>   
+            </div>
+            <div class="parallax circle-background" data-parallax-speed=".4" style="top:225rem; right:28rem; width: 2rem; background:var(--main-gradient); opacity: .7;"></div>  
+            <div class="parallax circle-background" data-parallax-speed=".6" style="top:225rem; right:35rem; width: 3rem; background:var(--main-gradient); opacity: .7;"></div>  
+            <div class="parallax circle-background" data-parallax-speed=".5" style="top:225rem; right:40rem; width: 4rem; background:var(--main-gradient); opacity: .7;"></div> 
+            <img class="parallax" src="assets/background/form-1.svg" data-parallax-speed="1.3" style="top:36rem; left:15rem;opacity: .5;"/>   
+            <div class="parallax circle-background" data-parallax-speed="2.5" style="top:40rem; left:49rem;; width: 4rem; background-color: var(--second-color); opacity: .7;"></div> 
+            <div class="parallax circle-background" data-parallax-speed="1.6" style="top:60rem; left:32rem; width: 3rem; background-color: var(--main-color); opacity: .6;"></div> 
+            <div class="parallax circle-background" data-parallax-speed="2" style="top:225rem; left:42rem; width: 4rem; background:var(--main-gradient); opacity: .7;"></div> 
+            <div class="parallax circle-background" data-parallax-speed="1.8" style="top:235rem; left:32rem; width: 2rem; background:var(--main-gradient); opacity: .7;"></div> 
+            <div class="parallax circle-background" data-parallax-speed=".4" style="top:195rem; left:28rem; width: 2rem; background:var(--main-gradient); opacity: .7;"></div>  
+            <div class="parallax circle-background" data-parallax-speed=".6" style="top:195rem; left:35rem; width: 3rem; background:var(--main-gradient); opacity: .7;"></div>  
+            <div class="parallax circle-background" data-parallax-speed=".5" style="top:195rem; left:40rem; width: 4rem; background:var(--main-gradient); opacity: .7;"></div> 
+            <div class="parallax" data-parallax-speed="1.2"  style="top:265rem; left: 40rem;">
+                <div class="rectangle-background" style="width: 4rem;top:6rem; left:-2rem; background-color: var(--main-color); opacity: .5; transform:rotate(45deg);"></div> 
+                <div class="rectangle-background" style="width: 6rem; left: 3rem; top:-6rem;background-color: var(--second-color); opacity: .5; transform:rotate(45deg);"></div>  
+                <div class="rectangle-background" style="width: 3rem;top:-10rem;left:-4rem;background-color: var(--main-color); opacity: .5; transform:rotate(45deg);"></div> 
+            </div>
+             <div class="parallax" data-parallax-speed="1.4"  style="top:415rem; left: 40rem;">
+                <div class="rectangle-background" style="width: 4rem;top:6rem; left:-2rem; background-color: var(--main-color); opacity: .5; transform:rotate(45deg);"></div> 
+                <div class="rectangle-background" style="width: 6rem; left: 3rem; top:-6rem;background-color: var(--second-color); opacity: .5; transform:rotate(45deg);"></div>  
+                <div class="rectangle-background" style="width: 3rem;top:-10rem;left:-4rem;background-color: var(--main-color); opacity: .5; transform:rotate(45deg);"></div> 
+            </div>
+            <div class="parallax circle-background" data-parallax-speed=".4" style="top:275rem; right:28rem; width: 2rem; background:var(--main-gradient); opacity: .7;"></div>  
+            <div class="parallax circle-background" data-parallax-speed=".6" style="top:275rem; right:35rem; width: 3rem; background:var(--main-gradient); opacity: .7;"></div>  
+            <div class="parallax circle-background" data-parallax-speed=".5" style="top:275rem; right:40rem; width: 4rem; background:var(--main-gradient); opacity: .7;"></div> 
+            <div class="parallax" data-parallax-speed="1.2"  style="top:135rem; right: 50rem;">
+                <div class="rectangle-background" style="width: 4rem;top:7rem; right:-2rem; background-color: var(--main-color); opacity: .5; transform:rotate(-45deg);"></div> 
+                <div class="rectangle-background" style="width: 6rem; right: 0; top:-2rem;background-color: var(--second-color); opacity: .5; transform:rotate(-45deg);"></div>  
+                <div class="rectangle-background" style="width: 3rem;top:-7rem;right:-4rem;background-color: var(--main-color); opacity: .5; transform:rotate(-45deg);"></div> 
+            </div>
+        </div>
+            <section id="Home">
+                <div class="container">
+                    <p>
+                        Hello, I am
+                    </p>
+                    <h1 style="font-size: var(--biggest-font-size); font-weight: var(--font-bold); color:var(--main-color);">
+                        Luca Benatti
+                    </h1>
+                    <h3>
+                        Postdoc at the Department of Mahtematics<br/>
+                        University of Wien
+                    </h3>
+                    <button id="downloadCurriculum" button-style="fill" style="font-size: 1.1rem; margin-top: 2rem;">
+                        DOWNLOAD CV
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path class="arrow-down-inbox-icon"></path>
+                        </svg> 
+                    </button>
+                </div>
+                <div class="container">
+                    <svg id="ProfilePicture" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180.87788 191.37144">
+                        <clipPath id="clipPicturePic">
+                            <path fill="blue"  d="m 154.94553,95.104286 c 7.95748,3.76932 13.76818,13.493344 13.97397,26.341324 0.20577,12.84797 -5.29852,28.64292 -13.01676,40.84842 -7.71824,12.2055 -17.64988,20.82092 -29.97512,25.54753 -12.32522,4.72663 -27.043252,5.56423 -44.633612,-2.87204 -17.5904,-8.43628 -38.051983,-26.14573 -50.855773,-45.41137 -12.80377,-19.26562 -17.94907,-40.086234 -17.59006,-56.599574 0.35904,-16.51333 6.22231,-28.71851 15.97483,-36.376842 9.75251,-7.65833 23.39358,-10.76947 35.539283,-9.15398 12.1457,1.61549 43.800572,-44.5557201 50.082762,-36.47850009 6.28224,8.07720999 8.19679,17.88922009 9.15403,25.54757009 0.95731,7.65835 0.95731,13.16266 4.84637,15.6157 3.88906,2.45306 11.66685,1.85475 20.58162,0.41882 8.91474,-1.43593 -2.03896,48.803622 5.91846,52.572972 z"></path>
+                        </clipPath>
+                        <linearGradient id="gradProfilePic" x1="0%" y1="100%" x2="75%" y2="0%">
+                          <stop offset="0%" style="stop-color:var(--main-color);stop-opacity:1" />
+                          <stop offset="100%" style="stop-color:var(--second-color);stop-opacity:1" />
+                        </linearGradient>
+                        <path fill="url(#gradProfilePic)" d="m 32.538578,179.96666 a 5.0393942,5.0393942 0 0 0 5.0394,5.0394 5.0393942,5.0393942 0 0 0 5.03938,-5.0394 5.0393942,5.0393942 0 0 0 -5.03938,-5.03939 5.0393942,5.0393942 0 0 0 -5.0394,5.03939 z M 130.67413,66.447678 a 8.2221694,8.2221694 0 0 0 8.22216,8.22218 8.2221694,8.2221694 0 0 0 8.22218,-8.22218 8.2221694,8.2221694 0 0 0 -8.22218,-8.22216 8.2221694,8.2221694 0 0 0 -8.22216,8.22216 z m 24.27143,28.65659 c 7.95746,3.76933 13.76815,13.493352 13.97394,26.341322 0.20578,12.84798 -5.29851,28.64292 -13.01675,40.84842 -7.71824,12.20551 -17.6499,20.82094 -29.97513,25.54755 -12.32524,4.72662 -27.043252,5.56422 -44.633612,-2.87205 -17.59038,-8.43627 -38.052,-26.14574 -50.85578,-45.41137 -12.80378,-19.26563 -17.94909,-40.086242 -17.59005,-56.599582 0.35904,-16.51332 6.22231,-28.71851 15.97483,-36.37684 9.75249,-7.65833 23.39357,-10.76947 35.53928,-9.15398 12.14569,1.61549 22.79532,7.9574 29.07754,16.03461 6.28221,8.07721 8.196762,17.88922 9.154042,25.54757 0.95729,7.65837 0.95729,13.16267 4.84635,15.61571 3.88906,2.45305 11.66686,1.85475 20.58161,0.41881 8.91475,-1.43593 18.96628,-3.70949 26.92373,0.0599 z" />
+                        <image clip-path="url(#clipPicturePic)" y="11.371429" x="0.87788391" width="180.87788" height="180.87788" xlink:href="assets/img/profilepic-low.png"></image>
+                    </svg>
+                </div>
+            </section>
+            <section id="AboutMe">
+                    <h1 class="section-title">ABOUT ME</h1>
+                        <div class="container">   
+                        <div class="container">
+                            <div class="picture-circle">
+                                <img src="assets/img/about.png">
+                            </div>
+                        </div>
+                        <div class="container" style="justify-content:center">             
+                            <p style="text-align: justify;">My research is in <em>Geometric Analysis</em> and <em>Mathematical General Relativity</em>. 
+                                I am interested in analytic and geometric problems that arise from the study of partial differential equations</p>
+                                <div id="Education">
+                                    <div class="edu-circle">
+                                    </div>
+                                    <div class="edu-description">
+                                        <p>2013-2016</p>
+                                        <h3>BACHELOR DEGREE</h3>
+                                        <p>University of Modena and Reggio Emilia<br/>Supervised by Prof. Gian Paolo Leonardi</p>
+                                    </div>
+                                    <div class="edu-circle"></div>
+                                    <div class="edu-description">
+                                        <p>2016-2018</p>
+                                        <h3>MASTER DEGREE</h3>
+                                        <p>University of Trieste<br/>Supervised by Prof. Nicola Gigli</p>
+                                    </div>
+                                    <div class="edu-circle"></div>
+                                    <div class="edu-description">
+                                        <p>2018-2022</p>
+                                        <h3>PHD DEGREE</h3>
+                                        <p> University of Trento<br/>Supervised by Prof. Lorenzo Mazzieri</p>
+                                    </div>
+                            
+                                </div>
+                        </div>
+                    </div>
+            </section>
+            <section id="Research">
+                <h1 class="section-title">RESEARCH TOPICS</h1>
+                <div id="Topics">
+                    
+                </div>
+                <button id="ViewAll" button-style="fill" style="font-size: 1.1rem; margin-top: 2rem;">
+                    VIEW ALL
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path  class="arrow-circle-icon"></path> 
+                    </svg> 
+                </button>
+            </section>
+            <section id="Talks">
+                <h1 class="section-title">SELECTED TALKS</h1>
+                <div class="talks swiper">
+                    <div id="TalksWrapper" class="swiper-wrapper">
+                    </div> 
+                    <div class="talks-button-next">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 24">
+                            <path class="arrow-right-icon"></path>
+                        </svg> 
+                    </div>
+                    <div class="talks-button-prev">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 24">
+                            <path class="arrow-left-icon"></path>
+                        </svg> 
+                    </div>
+                </div>
+            </section>
+            <section id="Events">
+                <h1 class="section-title">EVENTS</h1>
+                <div class="events swiper">
+                    <div id="EventsWrapper" class="swiper-wrapper">
+                    </div>
+                    <div class="events-pagination">
+                    </div>
+                </div>
+                
+                <div class="news">
+                    <h1>UPCOMING EVENTS:</h1>
+                    <div id="NewsList">
+                    </div>
+                    <svg class="news-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35 35" width="6rem">
+                        <linearGradient id="gradNews" x1="25%" y1="25%" x2="75%" y2="75%">
+                          <stop offset="0%" style="stop-color:var(--main-color);stop-opacity:1" />
+                          <stop offset="100%" style="stop-color:var(--second-color);stop-opacity:1" />
+                        </linearGradient>
+                        <path fill="url(#gradNews)" class="bubble"></path>
+                        <path class="speaker"></path>
+                    </svg> 
+                </div>
+            </section>
+        </main>
+        
+
+    
+           
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+    <script type="text/javascript" src="loadingdata.js" async></script>
+
+    </body>
+</html>

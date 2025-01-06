@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Geometric inequalities</title>
+        <script>
+          (function () {
+            // Retrieve the user's saved theme or fall back to the default (light)
+            const savedTheme = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = savedTheme || (prefersDark ? 'dark' : 'light');
+
+            // Apply the theme immediately
+            document.documentElement.setAttribute('theme', theme);
+          })();
+        </script>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="icons.css">
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    </head>
+    <body>        
+        <header state=""> 
+            <div class="pagenavigation">
+                <a href="index.html">
+                    <h2>LUCA <b> BENATTI</b></h2>
+                </a>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 24">
+                    <path class="arrow-right-icon"></path>
+                </svg> 
+                <a href="research.html">RESEARCH</a>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 24">
+                    <path class="arrow-right-icon"></path>
+                </svg> 
+            </div>
+            <nav> 
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="ChangeTheme">
+                    <path class="moon-icon"></path> 
+                    <path class="sun-icon"></path>
+                </svg>     
+            </nav>
+        </header>
+        <main>
+            <section class="subpage">   
+                <h1>
+                    NETWORK FLOWS
+                </h1>
+                <div>
+                </div>
+                
+                <div class="article">
+                    <div class="article-image">
+                        <img src="assets/img/topics/flow.jpeg">
+                    </div>
+                    <div class="article-text" style="display: none;">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                            Pellentesque mollis, felis eget fringilla dignissim, libero neque hendrerit nulla, eu eleifend magna libero eget leo. 
+                            Nulla interdum, felis sit amet tempor ultricies, nisl arcu consequat massa, vel tempor arcu nisl sit amet mi. 
+                            Aliquam iaculis ex vitae tincidunt sagittis. Suspendisse sit amet luctus felis.
+                            Nullam varius, velit in maximus malesuada, felis purus consequat elit, vitae laoreet mauris ligula in risus. 
+                            Quisque vitae ante non ante sollicitudin lacinia. Curabitur eros elit, sodales ut varius in, semper eu nibh. 
+                            Aliquam tincidunt lacus ligula, quis malesuada purus aliquam ac. Pellentesque convallis hendrerit erat convallis dictum. 
+                            Pellentesque a consectetur lacus, eu tincidunt libero.
+                        </p>
+                        <p>
+                            Nullam nec enim rutrum, lacinia nisi a, tincidunt tellus. Proin a odio vel est suscipit porttitor a eget nisi. Quisque sit amet tellus neque. Morbi ante nisi, posuere et tellus non, faucibus consequat purus. Quisque in sem arcu. Duis non risus id arcu faucibus cursus. Maecenas malesuada enim odio. Cras placerat, lectus convallis rhoncus dictum, mauris ex sodales arcu, quis euismod tellus velit at diam. Vestibulum vitae dui quis orci tincidunt fringilla id nec magna. Pellentesque consectetur tellus vitae mauris efficitur, quis pulvinar nisl egestas. Vestibulum accumsan varius ipsum a ultrices. Suspendisse eget nisi ut enim sagittis varius dictum et dolor. Aliquam dui arcu, ultricies at finibus ac, consequat sed justo.
+                        </p>
+                        <p>
+                            Nullam sit amet eros id mi dapibus facilisis vitae non felis. Etiam at congue quam. Vivamus facilisis magna vel orci posuere pharetra. Proin mauris massa, pretium non convallis nec, vestibulum eu elit. Ut vel neque aliquam, feugiat lorem id, ultricies lorem. Ut eu enim finibus, ultricies massa et, ornare massa. In dignissim pulvinar elit vitae vehicula. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+                        </p>
+                        <p>
+                            Etiam sollicitudin fermentum tincidunt. Donec sit amet orci sit amet lacus aliquet mollis at sed nisi. Suspendisse in odio commodo, convallis risus vel, ultricies odio. Ut eleifend, eros sed imperdiet venenatis, diam nibh laoreet quam, a porta mauris urna sit amet dui. Vivamus at dolor et ante hendrerit accumsan a a urna. Donec consectetur iaculis scelerisque. Cras accumsan ex vulputate, mollis risus vitae, bibendum dui. Pellentesque dignissim tincidunt pharetra. Aliquam facilisis ipsum ac ligula hendrerit posuere. Suspendisse suscipit vel lorem eget gravida. Aliquam erat volutpat. Maecenas vel ultricies sem, id sodales dolor. Nulla facilisi. Phasellus interdum consectetur pretium.
+                        </p>
+                        <p>
+                            Suspendisse viverra diam sodales sem iaculis, at blandit tortor vulputate. Cras malesuada nunc ac lobortis mollis. Nullam ac dolor finibus, volutpat erat ac, tristique quam. Suspendisse purus lectus, porta nec auctor non, luctus viverra ipsum. Mauris consectetur ligula sit amet ligula fermentum, non gravida justo condimentum. Praesent ullamcorper blandit magna cursus ultricies. Aliquam erat volutpat. Vestibulum posuere odio magna, ac accumsan ex varius ullamcorper. Fusce fermentum sapien a metus vestibulum auctor. Curabitur semper risus eu ante rutrum, id laoreet ligula commodo. Ut finibus, elit vehicula dignissim aliquet, enim tellus suscipit erat, ut euismod arcu mi sit amet mi. Sed bibendum malesuada ipsum scelerisque molestie. Maecenas lectus dolor, laoreet at libero sit amet, cursus blandit ligula. Mauris vel lectus maximus, aliquam turpis eu, pretium odio. Sed malesuada nunc ut arcu pharetra mollis.
+                        </p>
+                    </div>
+                </div>
+                
+            </section>
+        
+        </main>
+        <script type="text/javascript" src="subpages.js"></script>
+    </body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>General relativity</title>
+        <script>
+          (function () {
+            // Retrieve the user's saved theme or fall back to the default (light)
+            const savedTheme = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = savedTheme || (prefersDark ? 'dark' : 'light');
+
+            // Apply the theme immediately
+            document.documentElement.setAttribute('theme', theme);
+          })();
+        </script>
+        <script type="text/javascript">
+            MathJax = {
+                "HTML-CSS": {
+                    "font": "TeX"
+                }
+            };
+        </script>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="icons.css">
+        <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    </head>
+    <body>        
+        <header state=""> 
+            <div class="pagenavigation">
+                <a href="index.html">
+                    <h2>LUCA <b> BENATTI</b></h2>
+                </a>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 24">
+                    <path class="arrow-right-icon"></path>
+                </svg> 
+                <a href="research.html">RESEARCH</a>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 24">
+                    <path class="arrow-right-icon"></path>
+                </svg> 
+            </div>
+            <nav> 
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="ChangeTheme">
+                    <path class="moon-icon"></path> 
+                    <path class="sun-icon"></path>
+                </svg>     
+            </nav>
+        </header>
+        <main>
+            <section class="subpage">   
+                <h1>
+                    GENERAL RELATIVITY
+                </h1>
+                <div>
+                </div>
+                
+                <div class="article">
+                    <div class="article-image">
+                        <img src="assets/img/topics/relativity.jpeg">
+                    </div>
+                    <div class="article-text" style="display: none;">
+                        <p>
+                            In general relativity, an <em>initial data set</em> is a Riemannian manifold is a triple \((M, g, K)\),
+                            where \((M, g)\) is a Riemannian \(\Omega\)-manifold and \(K\) is a symmetric \((0, 2)\)-tensor which represents the second fundamental form
+                            of \(M\) inside an ambient Lorentzian spacetime. 
+                        </p>
+                        
+                            
+
+                        <h2>BIBLIOGRAPHY</h2>
+                        <div id="Bre23">
+                            [Bre23] S. Brendle (2023), “Sobolev inequalities in manifolds with nonnegative curvature”, <em>Comm. Pure Appl. Math.</em> 76(9), 2192–2218.
+                        </div>
+                        
+                        <div id="BFM24">
+                            [BFM24] L. Benatti, M. Fogangolo, and L. Mazzieri (2024), “Minkowski inequality in Riemannian manifolds with nonnegative Ricci curvature”, <em>Anal. & PDEs</em> 17(9), 3039-3077.
+                        </div>
+                        
+                        <div id="BPP24">
+                            [BPP24] L. Benatti, M. Pozzetta, and A. Pluda (2024), “Fine properties of nonlinear potentials and a unified perspecrtive on monotonicity formulas”, <em>ArXiv preprint</em>.
+                        </div>
+                        
+                    </div>
+                </div>
+                
+            </section>
+        
+        </main>
+        <script type="text/javascript" src="subpages.js"></script>
+    </body>
+</html>

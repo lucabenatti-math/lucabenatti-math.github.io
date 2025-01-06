@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Geometric inequalities</title>
+        <script>
+          (function () {
+            // Retrieve the user's saved theme or fall back to the default (light)
+            const savedTheme = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = savedTheme || (prefersDark ? 'dark' : 'light');
+
+            // Apply the theme immediately
+            document.documentElement.setAttribute('theme', theme);
+          })();
+        </script>
+        <script type="text/javascript">
+            MathJax = {
+                "HTML-CSS": {
+                    "font": "TeX"
+                }
+            };
+        </script>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="icons.css">
+        <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    </head>
+    <body>        
+        <header state=""> 
+            <div class="pagenavigation">
+                <a href="index.html">
+                    <h2>LUCA <b> BENATTI</b></h2>
+                </a>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 24">
+                    <path class="arrow-right-icon"></path>
+                </svg> 
+                <a href="research.html">RESEARCH</a>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 24">
+                    <path class="arrow-right-icon"></path>
+                </svg> 
+            </div>
+            <nav> 
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="ChangeTheme">
+                    <path class="moon-icon"></path> 
+                    <path class="sun-icon"></path>
+                </svg>     
+            </nav>
+        </header>
+        <main>
+            <section class="subpage">   
+                <h1>
+                    GEOMETRIC INEQUALITIES
+                </h1>
+                <div>
+                </div>
+                
+                <div class="article">
+                    <div class="article-image">
+                        <img src="assets/img/topics/geometric.jpeg">
+                    </div>
+                    <div class="article-text" >
+                        <p>
+                           The <em>isoperimetric inequality</em> is one of the most famous in geometry. It states that, among all convex subsets of \(\mathbb{R}^n\) with the same volume, the sphere minimizes the surface area, i.e
+                            \[
+                                 \frac{\vert \partial \mathbb{B}^n \vert}{\vert \mathbb{B}^n\vert^{\frac{n-1}{n}}}\leq \frac{\vert \partial \Omega \vert}{\vert \Omega \vert^{\frac{n-1}{n}}} 
+                            \]
+                            for every convex subset \(\Omega \subseteq \mathbb{R}^n\).
+                        </p>
+                        <p>
+                            This inequality belongs to the larger family of <em>Alexandrov-Fenchel inequalities</em>, which compare integrals of symmetric homogeneous polynomials in the principal curvatures. The first notable example in this family, besides the isoperimetric inequality, is the Minkowski inequality. This compares the area of a body with its total mean curvature, and it reads as follows:
+                            \[
+                                 (n\,\omega_n)^{\frac{1}{n-1}}\vert \partial \Omega \vert^{\frac{n-2}{n-1}}\leq\int_{\partial \Omega } \frac{\mathrm{H}}{n-1} \, \mathrm{d} \sigma,
+                            \]
+                            where \(\mathrm{H}\) is the mean curvature of \(\partial \Omega\).
+                        </p>
+                        <p>
+                            Brendle in [<a href="#Bre23">Bre23</a>] extended the isoperimetric inequality to all subsets of any Riemannian manifolds \((M,g)\) with nonnegative Ricci curvature. The resulting inequality displays a correction wich depends on the asymptotic volume ratio. Such a geometric quantity captures the asymptotic behaviour of the volume of large geodesic balls, beeing defined as
+                            \[
+                             \theta := \lim_{r \to +\infty} \frac{\vert B_r(o)\vert}{\omega_n r^n},
+                            \]
+                            where \(o \in M\) is a fixed point and \(B_r(o)\) is the geodesic ball of radius \(r\) centered at \(o\). In [<a href="#BFM24">BFM24</a>] and [<a href="#BPP24">BPP4</a>], I did the same for the Minkoswki inequality.
+                        </p>
+                        
+                        <p>
+                            <b>Theorem.</b> <em>Let \((M,g)\) a complete noncompact Riemannian manifold of dimension \(n \geq 3\) with nonnegative Ricci curvature and \(\theta\gt 0\). Let \(\Omega \subseteq M\) be a bounded subset with smooth boundary. Then
+                            \[
+                                (n\,\omega_n\theta)^{\frac{1}{n-1}}\vert \partial \Omega^* \vert^{\frac{n-2}{n-1}}\leq\int_{\partial \Omega } \left\vert\frac{\mathrm{H}}{n-1}\right\vert \, \mathrm{d} \sigma.
+                            \]
+                            Moreover, the equality holds if and only if \((M \smallsetminus \Omega, g)\) is a truncated cone on \(\partial \Omega\).</em>
+                            <br/>
+                            Here \(\partial \Omega^*\) is the strictly outward minimising hull, which is the maximal volume solution to the minimal area problem among all sets containing \(\Omega\).
+                        </p>
+                        
+                            
+
+                        <h2>BIBLIOGRAPHY</h2>
+                        <div id="Bre23">
+                            [Bre23] S. Brendle (2023), “Sobolev inequalities in manifolds with nonnegative curvature”, <em>Comm. Pure Appl. Math.</em> 76(9), 2192–2218.
+                        </div>
+                        
+                        <div id="BFM24">
+                            [BFM24] L. Benatti, M. Fogangolo, and L. Mazzieri (2024), “Minkowski inequality in Riemannian manifolds with nonnegative Ricci curvature”, <em>Anal. & PDEs</em> 17(9), 3039-3077.
+                        </div>
+                        
+                        <div id="BPP24">
+                            [BPP24] L. Benatti, M. Pozzetta, and A. Pluda (2024), “Fine properties of nonlinear potentials and a unified perspecrtive on monotonicity formulas”, <em>ArXiv preprint</em>.
+                        </div>
+                        
+                    </div>
+                </div>
+                
+            </section>
+        
+        </main>
+        <script type="text/javascript" src="subpages.js"></script>
+    </body>
+</html>

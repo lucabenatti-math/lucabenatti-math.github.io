@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Research</title>
+        <script>
+          (function () {
+            // Retrieve the user's saved theme or fall back to the default (light)
+            const savedTheme = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = savedTheme || (prefersDark ? 'dark' : 'light');
+
+            // Apply the theme immediately
+            document.documentElement.setAttribute('theme', theme);
+          })();
+        </script>
+        <script type="text/javascript">
+            MathJax = {
+                "HTML-CSS": {
+                    "font": "TeX"
+                }
+            };
+        </script>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="icons.css">
+        <script id="MathJax-script" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+        <script src="sql-wasm.js"></script>       
+    </head>
+    <body>        
+        <header state="">    
+            
+            <div class="pagenavigation">
+                <a href="index.html">
+                    <h2>LUCA <b> BENATTI</b></h2>
+                </a>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 24">
+                    <path class="arrow-right-icon"></path>
+                </svg> 
+            </div>
+            <nav> 
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="ChangeTheme">
+                    <path class="moon-icon"></path> 
+                    <path class="sun-icon"></path>
+                </svg>     
+            </nav>
+        </header>
+        <main>
+            <section class="subpage">
+                <h1>
+                    RESEARCH
+                </h1>
+                
+                <div id="Topics" style="margin-top: 2rem;">
+
+                </div>
+                
+                <div class="article">
+                    
+                    <div  class="article-text" style="margin-top: 3rem;">                            
+                        <h2 style="font-weight:var(--font-semi-bold);">List of papers</h2>
+                        <ul id="ListOfPapers">
+                        
+                        </ul>
+                    
+                    </div>
+                
+                </div>
+            </section>
+        
+        </main>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script type="text/javascript" src="loadingtopics.js" async></script>
+        <script type="text/javascript" src="subpages.js"></script>
+    </body>
+</html>
